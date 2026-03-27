@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/oxy.jpg</file>
+        <file>style/stylesheet.qss</file>
+        <file>icons/OxyChatIcon.ico</file>
+    </qresource>
+</RCC>

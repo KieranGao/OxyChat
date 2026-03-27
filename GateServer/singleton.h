@@ -1,0 +1,35 @@
+#ifndef SINGLETON_H
+#define SINGLETON_H
+
+#include <memory>
+#include <mutex>
+#include <iostream>
+
+// 单例基类，使用CRTP（Curiously Recurring Template Pattern）实现单例模式
+template<class T>
+class Singleton {
+
+protected:
+    Singleton();
+    ~Singleton();
+    Singleton<T>& operator=(const Singleton<T>&) = delete;
+    Singleton(const Singleton<T>&) = delete;
+
+public:
+    static std::shared_ptr<T> getInstance() {
+        std::once_flag flag;
+        static std::shared_ptr<T> instance;
+        std::call_once(flag, [](){
+            // 注意不能使用make_shared，因为构造函数是私有的，make_shared无法访问
+            instance = std::shared_ptr<T>(new T());
+        });
+        return instance;
+    }
+};
+
+
+
+#endif /* SINGLETON_H */
+
+
+
