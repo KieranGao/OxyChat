@@ -2,6 +2,7 @@
 #define HTTPCONNECTION_H
 
 #include "global.h"
+#include "logicsystem.h"
 
 class HttpConnection : public std::enable_shared_from_this<HttpConnection> 
 {
@@ -11,8 +12,8 @@ public:
     void start();
 private:
     void checkDeadline_();
-    void handleRequest_(http::request<http::dynamic_body>&& req);
-    void makeResponse_(http::response<http::dynamic_body>&& resp);
+    void handleRequest_();
+    void makeResponse_();
 
     tcp::socket socket_;
     // 用于存储从socket读取的数据
