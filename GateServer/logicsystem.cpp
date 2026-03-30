@@ -1,4 +1,5 @@
 #include "logicsystem.h"
+#include "httpconnection.h"
 
 // 注册GET请求的URL和对应的回调函数
 void LogicSystem::registerGet(std::string url, HttpHandler handler) {

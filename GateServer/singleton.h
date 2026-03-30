@@ -10,8 +10,8 @@ template<class T>
 class Singleton {
 
 protected:
-    Singleton();
-    ~Singleton();
+    Singleton() = default;
+    ~Singleton() = default;
     Singleton<T>& operator=(const Singleton<T>&) = delete;
     Singleton(const Singleton<T>&) = delete;
 

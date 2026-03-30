@@ -129,6 +129,30 @@ GateServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/build
 .PHONY : GateServer/fast
 
+cserver.o: cserver.cpp.o
+.PHONY : cserver.o
+
+# target to build an object file
+cserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.o
+.PHONY : cserver.cpp.o
+
+cserver.i: cserver.cpp.i
+.PHONY : cserver.i
+
+# target to preprocess a source file
+cserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.i
+.PHONY : cserver.cpp.i
+
+cserver.s: cserver.cpp.s
+.PHONY : cserver.s
+
+# target to generate assembly for a file
+cserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.s
+.PHONY : cserver.cpp.s
+
 home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o: home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o
 
@@ -201,29 +225,77 @@ home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s
 
-test.o: test.cpp.o
-.PHONY : test.o
+httpconnection.o: httpconnection.cpp.o
+.PHONY : httpconnection.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/test.cpp.o
-.PHONY : test.cpp.o
+httpconnection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.o
+.PHONY : httpconnection.cpp.o
 
-test.i: test.cpp.i
-.PHONY : test.i
+httpconnection.i: httpconnection.cpp.i
+.PHONY : httpconnection.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/test.cpp.i
-.PHONY : test.cpp.i
+httpconnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.i
+.PHONY : httpconnection.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+httpconnection.s: httpconnection.cpp.s
+.PHONY : httpconnection.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/test.cpp.s
-.PHONY : test.cpp.s
+httpconnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.s
+.PHONY : httpconnection.cpp.s
+
+logicsystem.o: logicsystem.cpp.o
+.PHONY : logicsystem.o
+
+# target to build an object file
+logicsystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.o
+.PHONY : logicsystem.cpp.o
+
+logicsystem.i: logicsystem.cpp.i
+.PHONY : logicsystem.i
+
+# target to preprocess a source file
+logicsystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.i
+.PHONY : logicsystem.cpp.i
+
+logicsystem.s: logicsystem.cpp.s
+.PHONY : logicsystem.s
+
+# target to generate assembly for a file
+logicsystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.s
+.PHONY : logicsystem.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -234,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GateServer"
+	@echo "... cserver.o"
+	@echo "... cserver.i"
+	@echo "... cserver.s"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.s"
@@ -243,9 +318,15 @@ help:
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... httpconnection.o"
+	@echo "... httpconnection.i"
+	@echo "... httpconnection.s"
+	@echo "... logicsystem.o"
+	@echo "... logicsystem.i"
+	@echo "... logicsystem.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

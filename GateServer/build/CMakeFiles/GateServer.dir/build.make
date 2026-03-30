@@ -69,24 +69,66 @@ include CMakeFiles/GateServer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GateServer.dir/flags.make
 
-CMakeFiles/GateServer.dir/test.cpp.o: CMakeFiles/GateServer.dir/flags.make
-CMakeFiles/GateServer.dir/test.cpp.o: ../test.cpp
-CMakeFiles/GateServer.dir/test.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GateServer.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/test.cpp.o -MF CMakeFiles/GateServer.dir/test.cpp.o.d -o CMakeFiles/GateServer.dir/test.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/test.cpp
+CMakeFiles/GateServer.dir/httpconnection.cpp.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/httpconnection.cpp.o: ../httpconnection.cpp
+CMakeFiles/GateServer.dir/httpconnection.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GateServer.dir/httpconnection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/httpconnection.cpp.o -MF CMakeFiles/GateServer.dir/httpconnection.cpp.o.d -o CMakeFiles/GateServer.dir/httpconnection.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.cpp
 
-CMakeFiles/GateServer.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/test.cpp > CMakeFiles/GateServer.dir/test.cpp.i
+CMakeFiles/GateServer.dir/httpconnection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/httpconnection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.cpp > CMakeFiles/GateServer.dir/httpconnection.cpp.i
 
-CMakeFiles/GateServer.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/test.cpp -o CMakeFiles/GateServer.dir/test.cpp.s
+CMakeFiles/GateServer.dir/httpconnection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/httpconnection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.cpp -o CMakeFiles/GateServer.dir/httpconnection.cpp.s
+
+CMakeFiles/GateServer.dir/logicsystem.cpp.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/logicsystem.cpp.o: ../logicsystem.cpp
+CMakeFiles/GateServer.dir/logicsystem.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GateServer.dir/logicsystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/logicsystem.cpp.o -MF CMakeFiles/GateServer.dir/logicsystem.cpp.o.d -o CMakeFiles/GateServer.dir/logicsystem.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.cpp
+
+CMakeFiles/GateServer.dir/logicsystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/logicsystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.cpp > CMakeFiles/GateServer.dir/logicsystem.cpp.i
+
+CMakeFiles/GateServer.dir/logicsystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/logicsystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.cpp -o CMakeFiles/GateServer.dir/logicsystem.cpp.s
+
+CMakeFiles/GateServer.dir/cserver.cpp.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/cserver.cpp.o: ../cserver.cpp
+CMakeFiles/GateServer.dir/cserver.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GateServer.dir/cserver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/cserver.cpp.o -MF CMakeFiles/GateServer.dir/cserver.cpp.o.d -o CMakeFiles/GateServer.dir/cserver.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/cserver.cpp
+
+CMakeFiles/GateServer.dir/cserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/cserver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/cserver.cpp > CMakeFiles/GateServer.dir/cserver.cpp.i
+
+CMakeFiles/GateServer.dir/cserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/cserver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/cserver.cpp -o CMakeFiles/GateServer.dir/cserver.cpp.s
+
+CMakeFiles/GateServer.dir/main.cpp.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/main.cpp.o: ../main.cpp
+CMakeFiles/GateServer.dir/main.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GateServer.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/main.cpp.o -MF CMakeFiles/GateServer.dir/main.cpp.o.d -o CMakeFiles/GateServer.dir/main.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/main.cpp
+
+CMakeFiles/GateServer.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/main.cpp > CMakeFiles/GateServer.dir/main.cpp.i
+
+CMakeFiles/GateServer.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/main.cpp -o CMakeFiles/GateServer.dir/main.cpp.s
 
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o: CMakeFiles/GateServer.dir/flags.make
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o: /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o -MF CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o.d -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp
 
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.i: cmake_force
@@ -97,24 +139,10 @@ CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/sr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.s
 
-CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: CMakeFiles/GateServer.dir/flags.make
-CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp
-CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o -MF CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o.d -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp
-
-CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp > CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i
-
-CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s
-
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o: CMakeFiles/GateServer.dir/flags.make
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o: /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o -MF CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o.d -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp
 
 CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.i: cmake_force
@@ -125,23 +153,43 @@ CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/sr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s
 
+CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: CMakeFiles/GateServer.dir/flags.make
+CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp
+CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o: CMakeFiles/GateServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o -MF CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o.d -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o -c /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp
+
+CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp > CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.i
+
+CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp -o CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.s
+
 # Object files for target GateServer
 GateServer_OBJECTS = \
-"CMakeFiles/GateServer.dir/test.cpp.o" \
+"CMakeFiles/GateServer.dir/httpconnection.cpp.o" \
+"CMakeFiles/GateServer.dir/logicsystem.cpp.o" \
+"CMakeFiles/GateServer.dir/cserver.cpp.o" \
+"CMakeFiles/GateServer.dir/main.cpp.o" \
 "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o" \
-"CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o" \
-"CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o"
+"CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o" \
+"CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o"
 
 # External object files for target GateServer
 GateServer_EXTERNAL_OBJECTS =
 
-GateServer: CMakeFiles/GateServer.dir/test.cpp.o
+GateServer: CMakeFiles/GateServer.dir/httpconnection.cpp.o
+GateServer: CMakeFiles/GateServer.dir/logicsystem.cpp.o
+GateServer: CMakeFiles/GateServer.dir/cserver.cpp.o
+GateServer: CMakeFiles/GateServer.dir/main.cpp.o
 GateServer: CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o
-GateServer: CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o
 GateServer: CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o
+GateServer: CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o
 GateServer: CMakeFiles/GateServer.dir/build.make
 GateServer: CMakeFiles/GateServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GateServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable GateServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GateServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

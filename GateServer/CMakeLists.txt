@@ -18,11 +18,18 @@ find_package(Boost REQUIRED)
 set(JSONCPP_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../jsoncpp")
 set(JSONCPP_INCLUDE_DIR "${JSONCPP_ROOT}/include")
 set(JSONCPP_SOURCES
-    ${JSONCPP_ROOT}/src/lib_json/*.cpp
+    ${JSONCPP_ROOT}/src/lib_json/json_reader.cpp
+    ${JSONCPP_ROOT}/src/lib_json/json_writer.cpp
+    ${JSONCPP_ROOT}/src/lib_json/json_value.cpp
 )
 
 # 设置Gateserver源文件
-set(GATESERVER_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+set(GATESERVER_SOURCES 
+    ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/cserver.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 
+)
 
 # 包含目录
 include_directories(${Boost_INCLUDE_DIRS})

@@ -2,6 +2,7 @@
 #define CSERVER_H
 
 #include "global.h"
+#include "httpconnection.h"
 
 class CServer : public std::enable_shared_from_this<CServer>
 {

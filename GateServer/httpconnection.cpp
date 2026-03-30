@@ -10,7 +10,7 @@ void HttpConnection::start() {
     byte_transferred) {
         try {
             if(ec) {
-                std::cout << "read error: " << ec.message() << std::endl;
+                std::cout << "read e rror: " << ec.message() << std::endl;
                 return;
             }
             // 这里不需要使用byte_transferred变量，但编译器会警告未使用变量，所以用boost::ignore_unused来避免警告
@@ -59,6 +59,7 @@ void HttpConnection::checkDeadline_() {
     auto self = shared_from_this();
     // 定时器，异步等待，如果超时了就关闭连接
     deadline_.async_wait([self](beast::error_code ec) {
+        // 如果ec有值，说明定时器被取消了，说明连接已经处理完了，不需要关闭连接
         if (ec) {
             return; // 定时器被取消了，说明连接已经处理完了，不需要关闭连接
         }
