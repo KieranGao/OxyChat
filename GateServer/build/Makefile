@@ -129,30 +129,6 @@ GateServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/build
 .PHONY : GateServer/fast
 
-cserver.o: cserver.cpp.o
-.PHONY : cserver.o
-
-# target to build an object file
-cserver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.o
-.PHONY : cserver.cpp.o
-
-cserver.i: cserver.cpp.i
-.PHONY : cserver.i
-
-# target to preprocess a source file
-cserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.i
-.PHONY : cserver.cpp.i
-
-cserver.s: cserver.cpp.s
-.PHONY : cserver.s
-
-# target to generate assembly for a file
-cserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/cserver.cpp.s
-.PHONY : cserver.cpp.s
-
 home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o: home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o
 
@@ -297,6 +273,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mainserver.o: mainserver.cpp.o
+.PHONY : mainserver.o
+
+# target to build an object file
+mainserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.o
+.PHONY : mainserver.cpp.o
+
+mainserver.i: mainserver.cpp.i
+.PHONY : mainserver.i
+
+# target to preprocess a source file
+mainserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.i
+.PHONY : mainserver.cpp.i
+
+mainserver.s: mainserver.cpp.s
+.PHONY : mainserver.s
+
+# target to generate assembly for a file
+mainserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.s
+.PHONY : mainserver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,9 +306,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GateServer"
-	@echo "... cserver.o"
-	@echo "... cserver.i"
-	@echo "... cserver.s"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.s"
@@ -327,6 +324,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainserver.o"
+	@echo "... mainserver.i"
+	@echo "... mainserver.s"
 .PHONY : help
 
 

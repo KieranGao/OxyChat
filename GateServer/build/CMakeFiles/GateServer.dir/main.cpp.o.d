@@ -1623,7 +1623,7 @@ CMakeFiles/GateServer.dir/main.cpp.o: \
  /usr/include/boost/beast/websocket/impl/stream.hpp \
  /usr/include/boost/beast/websocket/impl/write.hpp \
  /usr/include/boost/beast/zlib.hpp /usr/include/c++/13/iostream \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/cserver.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mainserver.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h

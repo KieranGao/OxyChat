@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GateServer.dir/cserver.cpp.o"
-  "CMakeFiles/GateServer.dir/cserver.cpp.o.d"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o.d"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o"
@@ -13,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GateServer.dir/logicsystem.cpp.o.d"
   "CMakeFiles/GateServer.dir/main.cpp.o"
   "CMakeFiles/GateServer.dir/main.cpp.o.d"
+  "CMakeFiles/GateServer.dir/mainserver.cpp.o"
+  "CMakeFiles/GateServer.dir/mainserver.cpp.o.d"
   "GateServer"
   "GateServer.pdb"
 )

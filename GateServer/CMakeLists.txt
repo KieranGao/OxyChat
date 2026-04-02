@@ -27,7 +27,7 @@ set(JSONCPP_SOURCES
 set(GATESERVER_SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/cserver.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/mainserver.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 
 )
 

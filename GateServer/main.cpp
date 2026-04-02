@@ -1,5 +1,5 @@
 #include "global.h"
-#include "cserver.h"
+#include "mainserver.h"
 
 int main() {
     try
@@ -14,7 +14,7 @@ int main() {
             }
             ioc.stop();
             });
-        std::make_shared<CServer>(ioc, port)->start();
+        std::make_shared<MainServer>(ioc, port)->start();
         ioc.run();
     }
     catch (std::exception const& e)
