@@ -9,6 +9,11 @@ void LogicSystem::registerGet(std::string url, HttpHandler handler) {
 LogicSystem::LogicSystem() {
     registerGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
         beast::ostream(connection->resp_.body()) << "This is a GET response\r\n";
+        int cnt = 0;
+        for(auto &[key, value] : connection->get_params_) {
+            cnt++;
+            beast::ostream(connection->resp_.body()) << "param " << cnt << ": " << key << " = " << value << "\r\n";
+        }
     });
 }
 

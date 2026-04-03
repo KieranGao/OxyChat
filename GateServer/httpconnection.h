@@ -14,7 +14,7 @@ private:
     void checkDeadline_();
     void handleRequest_();
     void makeResponse_();
-
+    void PreParseGetParam();
     tcp::socket socket_;
     // 用于存储从socket读取的数据
     beast::flat_buffer buffer_ {8192}; // 8KB
@@ -24,6 +24,9 @@ private:
         socket_.get_executor(), // socket_的io上下文
         std::chrono::seconds(60) // 60秒超时
     };
+    // GET请求的URL和参数
+    std::string get_url_;
+    std::unordered_map<std::string, std::string> get_params_;
 
 };
 #endif /* HTTPCONNECTION_H */
