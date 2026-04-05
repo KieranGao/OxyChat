@@ -63,6 +63,10 @@ void RegisterDialog::on_getveripushButton_clicked()
     if(match){
         ValidContent(tr("===No error detected==="));
         //发送http请求获取验证码
+        QJsonObject json_obj;
+        json_obj["email"] = email;
+        HttpManager::getInstance()->PostHttpRequest(QUrl(GATESERVER_URL_PREFIX + "/get_verify_code"), json_obj, ReqId::ID_GET_VERIFY_CODE, Modules::MOD_REGISTER);
+
     }else{
         ErrorContent(tr("===Invalid email address==="));
     }

@@ -40,3 +40,24 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+# 自动复制 config.ini 到输出目录（Debug/Release 都复制，跨平台）
+CONFIG(release, debug|release): CONFIG(Release, Release|Debug) {
+    win32 {
+        QMAKE_POST_LINK += copy /Y \"$$PWD/config.ini\" \"$$OUT_PWD/$$DESTDIR/\"
+    } else {
+        QMAKE_POST_LINK += cp -f \"$$PWD/config.ini\" \"$$OUT_PWD/$$DESTDIR/\"
+    }
+}
+
+# Debug 也复制
+CONFIG(debug, debug|release) {
+    win32 {
+        QMAKE_POST_LINK += copy /Y \"$$PWD/config.ini\" \"$$OUT_PWD/$$DESTDIR/\"
+    } else {
+        QMAKE_POST_LINK += cp -f \"$$PWD/config.ini\" \"$$OUT_PWD/$$DESTDIR/\"
+    }
+}
+
+DISTFILES += \
+    config.ini

@@ -1624,6 +1624,18 @@ CMakeFiles/GateServer.dir/mainserver.cpp.o: \
  /usr/include/boost/beast/websocket/impl/stream.hpp \
  /usr/include/boost/beast/websocket/impl/write.hpp \
  /usr/include/boost/beast/zlib.hpp /usr/include/c++/13/iostream \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/json.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/config.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/allocator.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/version.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/json_features.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/forwards.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/reader.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/value.h \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/stack \
+ /usr/include/c++/13/bits/stl_stack.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/writer.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h

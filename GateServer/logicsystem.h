@@ -19,6 +19,8 @@ public:
     ~LogicSystem() = default;
     bool handleGet(std::string url, std::shared_ptr<HttpConnection> connection);
     void registerGet(std::string url, HttpHandler handler);
+    bool handlePost(std::string url, std::shared_ptr<HttpConnection> connection);
+    void registerPost(std::string url, HttpHandler handler);
 private:
     LogicSystem();
     std::unordered_map<std::string, HttpHandler> getHandlers_; // 存储GET请求的URL和对应的处理函数

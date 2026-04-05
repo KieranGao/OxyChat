@@ -24,4 +24,6 @@ enum Modules{
 // 用于qss的刷新
 extern std::function<void(QWidget*)> repolish;
 
+extern QString GATESERVER_URL_PREFIX;
+
 #endif // GLOBAL_H
