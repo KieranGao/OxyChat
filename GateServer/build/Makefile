@@ -297,6 +297,54 @@ mainserver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.s
 .PHONY : mainserver.cpp.s
 
+message.grpc.pb.o: message.grpc.pb.cc.o
+.PHONY : message.grpc.pb.o
+
+# target to build an object file
+message.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.grpc.pb.cc.o
+.PHONY : message.grpc.pb.cc.o
+
+message.grpc.pb.i: message.grpc.pb.cc.i
+.PHONY : message.grpc.pb.i
+
+# target to preprocess a source file
+message.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.grpc.pb.cc.i
+.PHONY : message.grpc.pb.cc.i
+
+message.grpc.pb.s: message.grpc.pb.cc.s
+.PHONY : message.grpc.pb.s
+
+# target to generate assembly for a file
+message.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.grpc.pb.cc.s
+.PHONY : message.grpc.pb.cc.s
+
+message.pb.o: message.pb.cc.o
+.PHONY : message.pb.o
+
+# target to build an object file
+message.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
+
+message.pb.i: message.pb.cc.i
+.PHONY : message.pb.i
+
+# target to preprocess a source file
+message.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
+
+message.pb.s: message.pb.cc.s
+.PHONY : message.pb.s
+
+# target to generate assembly for a file
+message.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +375,12 @@ help:
 	@echo "... mainserver.o"
 	@echo "... mainserver.i"
 	@echo "... mainserver.s"
+	@echo "... message.grpc.pb.o"
+	@echo "... message.grpc.pb.i"
+	@echo "... message.grpc.pb.s"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 .PHONY : help
 
 

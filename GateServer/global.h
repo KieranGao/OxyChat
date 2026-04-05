@@ -20,4 +20,7 @@ enum class ErrorCodes {
     RPC_ERROR = 1002,
 };
 
+class ConfigManager;
+extern ConfigManager g_configManager;
+
 #endif /* GLOBAL_H */

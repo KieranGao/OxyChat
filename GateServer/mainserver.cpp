@@ -22,7 +22,7 @@ void MainServer::start()
             self->start();
         }
         catch (std::exception& exp) {
-            std::cout << "exception is " << exp.what() << std::endl;
+            std::cerr << "exception is " << exp.what() << std::endl;
             self->start();
         }
     });

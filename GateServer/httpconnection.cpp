@@ -10,7 +10,7 @@ void HttpConnection::start() {
     byte_transferred) {
         try {
             if(ec) {
-                std::cout << "read error: " << ec.message() << std::endl;
+                std::cerr << "read error: " << ec.message() << std::endl;
                 return;
             }
             // 这里不需要使用byte_transferred变量，但编译器会警告未使用变量，所以用boost::ignore_unused来避免警告
@@ -20,7 +20,7 @@ void HttpConnection::start() {
             self->checkDeadline_(); // 检查是否超时
         }
         catch (std::exception& exp) {
-            std::cout << "exception is " << exp.what() << std::endl;
+            std::cerr << "exception is " << exp.what() << std::endl;
         }
     });
 }

@@ -13,8 +13,16 @@ file(REMOVE_RECURSE
   "CMakeFiles/GateServer.dir/main.cpp.o.d"
   "CMakeFiles/GateServer.dir/mainserver.cpp.o"
   "CMakeFiles/GateServer.dir/mainserver.cpp.o.d"
+  "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o"
+  "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o.d"
+  "CMakeFiles/GateServer.dir/message.pb.cc.o"
+  "CMakeFiles/GateServer.dir/message.pb.cc.o.d"
   "GateServer"
   "GateServer.pdb"
+  "message.grpc.pb.cc"
+  "message.grpc.pb.h"
+  "message.pb.cc"
+  "message.pb.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,5 +1,6 @@
 #include "logicsystem.h"
 #include "httpconnection.h"
+#include "verifygrpcclient.h"
 
 // 注册GET请求的URL和对应的回调函数
 void LogicSystem::registerGet(std::string url, HttpHandler handler) {
@@ -23,7 +24,7 @@ LogicSystem::LogicSystem() {
 
     registerPost("/get_verify_code", [](std::shared_ptr<HttpConnection> connection) {
         auto body = beast::buffers_to_string(connection->req_.body().data());
-        std::cout << "Received POST data: " << body << std::endl;
+        std::cerr << "Received POST data: " << body << std::endl;
         connection->resp_.set(http::field::content_type, "application/json");
         // 解析JSON数据
         Json::Value jsonData;
@@ -32,15 +33,16 @@ LogicSystem::LogicSystem() {
         // 解析body中的JSON数据，如果解析失败则返回错误信息，成功则jsonData中存储解析后的数据
         bool parse_success = reader.parse(body, jsonData);
         if(!parse_success) {
-            std::cout << "JSON parse error!"<< std::endl;
+            std::cerr << "JSON parse error!"<< std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::JSON_PARSE_ERROR);
             auto jsonRespstr = jsonResp.toStyledString();
             beast::ostream(connection->resp_.body()) << jsonRespstr;
             return;            
         }
         auto email = jsonData["email"].asString();
-        std::cout << "Parsed email: " << email << std::endl;
-        jsonResp["error"] = static_cast<int>(ErrorCodes::SUCCESS);
+        GetVerifyRsp verifyResp = VerifyGrpcClient::getInstance()->getVerifyCode(email);
+        std::cerr << "Parsed email: " << email << std::endl;
+        jsonResp["error"] = verifyResp.error();
         jsonResp["email"] = jsonData["email"];
         // 需要转为字符串，因为HTTP响应的body是一个字符串流，不能直接写入Json::Value对象
         auto jsonRespstr = jsonResp.toStyledString();
