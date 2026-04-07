@@ -1,5 +1,8 @@
 #include "iocontextpool.h"
 
+// 为什么不用加锁？
+// 因为每个线程都有自己的io_context对象，线程之间不会共享io_context对象，所以不需要加锁来保护io_context对象的访问。
+// 同时，getIOContext()函数只是返回一个io_context对象的引用，并不会修改io_context对象的状态，所以也不需要加锁来保护io_context对象的状态。
 IOContextPool::IOContextPool(size_t pool_size) : io_contexts_(pool_size), works_(pool_size)
     , next_io_context_(0) 
 {
