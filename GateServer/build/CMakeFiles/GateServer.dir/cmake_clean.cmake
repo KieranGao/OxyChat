@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o.d"
   "CMakeFiles/GateServer.dir/httpconnection.cpp.o"
   "CMakeFiles/GateServer.dir/httpconnection.cpp.o.d"
+  "CMakeFiles/GateServer.dir/iocontextpool.cpp.o"
+  "CMakeFiles/GateServer.dir/iocontextpool.cpp.o.d"
   "CMakeFiles/GateServer.dir/logicsystem.cpp.o"
   "CMakeFiles/GateServer.dir/logicsystem.cpp.o.d"
   "CMakeFiles/GateServer.dir/main.cpp.o"

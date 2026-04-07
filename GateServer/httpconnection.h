@@ -8,8 +8,9 @@ class HttpConnection : public std::enable_shared_from_this<HttpConnection>
 {
 public:
     friend class LogicSystem; // 让LogicSystem类可以访问HttpConnection的私有成员函数和变量
-    HttpConnection(tcp::socket socket);
+    HttpConnection(boost::asio::io_context& ioc);
     void start();
+    tcp::socket& socket() { return socket_; }
 private:
     void checkDeadline_();
     void handleRequest_();

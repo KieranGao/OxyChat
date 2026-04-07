@@ -25,8 +25,8 @@ set(JSONCPP_SOURCES
 
 # 设置Gateserver源文件
 set(GATESERVER_SOURCES 
-    ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp 
-
+    ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/iocontextpool.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/mainserver.cpp 

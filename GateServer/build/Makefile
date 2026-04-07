@@ -249,6 +249,30 @@ httpconnection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.s
 .PHONY : httpconnection.cpp.s
 
+iocontextpool.o: iocontextpool.cpp.o
+.PHONY : iocontextpool.o
+
+# target to build an object file
+iocontextpool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.o
+.PHONY : iocontextpool.cpp.o
+
+iocontextpool.i: iocontextpool.cpp.i
+.PHONY : iocontextpool.i
+
+# target to preprocess a source file
+iocontextpool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.i
+.PHONY : iocontextpool.cpp.i
+
+iocontextpool.s: iocontextpool.cpp.s
+.PHONY : iocontextpool.s
+
+# target to generate assembly for a file
+iocontextpool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.s
+.PHONY : iocontextpool.cpp.s
+
 logicsystem.o: logicsystem.cpp.o
 .PHONY : logicsystem.o
 
@@ -393,6 +417,9 @@ help:
 	@echo "... httpconnection.o"
 	@echo "... httpconnection.i"
 	@echo "... httpconnection.s"
+	@echo "... iocontextpool.o"
+	@echo "... iocontextpool.i"
+	@echo "... iocontextpool.s"
 	@echo "... logicsystem.o"
 	@echo "... logicsystem.i"
 	@echo "... logicsystem.s"
