@@ -4,14 +4,15 @@ ConfigManager::ConfigManager() {
     boost::filesystem::path current_path = boost::filesystem::current_path();
     // 构建config.ini文件的完整路径  
     boost::filesystem::path config_path = current_path / "config.ini";
+    
     std::cout << "Config path: " << config_path << std::endl;
     // 使用Boost.PropertyTree来读取INI文件  
     boost::property_tree::ptree pt;
     boost::property_tree::read_ini(config_path.string(), pt);
     // 遍历INI文件中的所有section  
-    for (const auto& [section_name, section_tree] : pt) {
-        const std::string& section_name = section_name;
-        const boost::property_tree::ptree& section_tree = section_tree;
+    for (const auto& [section_name_, section_tree_] : pt) {
+        const std::string& section_name = section_name_;
+        const boost::property_tree::ptree& section_tree = section_tree_;
         // 对于每个section，遍历其所有的key-value对  
         std::map<std::string, std::string> section_config;
         for (const auto& [key_, value_] : section_tree) {

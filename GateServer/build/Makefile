@@ -129,6 +129,30 @@ GateServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/build
 .PHONY : GateServer/fast
 
+configmanager.o: configmanager.cpp.o
+.PHONY : configmanager.o
+
+# target to build an object file
+configmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.o
+.PHONY : configmanager.cpp.o
+
+configmanager.i: configmanager.cpp.i
+.PHONY : configmanager.i
+
+# target to preprocess a source file
+configmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.i
+.PHONY : configmanager.cpp.i
+
+configmanager.s: configmanager.cpp.s
+.PHONY : configmanager.s
+
+# target to generate assembly for a file
+configmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.s
+.PHONY : configmanager.cpp.s
+
 home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o: home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GateServer"
+	@echo "... configmanager.o"
+	@echo "... configmanager.i"
+	@echo "... configmanager.s"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.s"

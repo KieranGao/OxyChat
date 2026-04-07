@@ -12,7 +12,7 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
 # 查找Boost，如果没有Boost库，CMake会报错
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED COMPONENTS filesystem system)
 
 # 设置jsoncpp路径
 set(JSONCPP_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../jsoncpp")
@@ -26,6 +26,8 @@ set(JSONCPP_SOURCES
 # 设置Gateserver源文件
 set(GATESERVER_SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp 
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/mainserver.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 
@@ -75,6 +77,14 @@ set(SOURCES
 
 # 创建可执行文件
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CMAKE_CURRENT_SOURCE_DIR}/config.ini"
+        $<TARGET_FILE_DIR:${PROJECT_NAME}>/config.ini
+    COMMENT "Copying config.ini to build directory"
+)
 
 # 链接库
 target_link_libraries(${PROJECT_NAME}

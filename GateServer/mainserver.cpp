@@ -7,6 +7,7 @@ MainServer::MainServer(boost::asio::io_context& ioc, unsigned short port)
 
 void MainServer::start()
 {    
+    std::cerr << "GateServer is listening on port: " << acceptor_.local_endpoint().port() << std::endl;
     // 延长对象生命周期到回调执行时，否则在回调执行时对象可能已经被销毁了
     auto self = shared_from_this();
     acceptor_.async_accept(socket_, [self](beast::error_code ec) {

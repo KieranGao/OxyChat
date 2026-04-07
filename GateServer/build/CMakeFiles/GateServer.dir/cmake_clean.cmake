@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GateServer.dir/configmanager.cpp.o"
+  "CMakeFiles/GateServer.dir/configmanager.cpp.o.d"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o.d"
   "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o"
