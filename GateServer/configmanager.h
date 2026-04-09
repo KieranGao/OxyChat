@@ -1,8 +1,11 @@
+#ifndef CONFIGMANAGER_H
+#define CONFIGMANAGER_H
+
 #include "global.h"
 #include "boost/filesystem.hpp"
 #include "boost/property_tree/ptree.hpp"
 #include "boost/property_tree/ini_parser.hpp"
-
+#include "singleton.h"
 struct SectionInfo {
     SectionInfo() = default;
     ~SectionInfo(){_section_datas.clear();}
@@ -28,7 +31,6 @@ struct SectionInfo {
 class ConfigManager
 {
 public:
-    ConfigManager();
     ~ConfigManager() {conf_map_.clear();};
     SectionInfo operator[](const std::string& section) {
         if (conf_map_.find(section) == conf_map_.end()) {
@@ -41,11 +43,19 @@ public:
             return *this;
         }
         this->conf_map_ = src.conf_map_;
+        return *this;
     };
+    static ConfigManager& getInstance() {
+        static ConfigManager instance;
+        return instance;
+    }
     ConfigManager(const ConfigManager& src) {
         this->conf_map_ = src.conf_map_;
     }
 private:
+    ConfigManager();
     // 存储section和key-value对的map  
     std::map<std::string, SectionInfo> conf_map_;
 };
+
+#endif // CONFIGMANAGER_H

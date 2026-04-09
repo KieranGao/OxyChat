@@ -1,3 +1,5 @@
+#ifndef IOCONTEXTPOOL_H
+#define IOCONTEXTPOOL_H
 
 #include <boost/asio.hpp>
 #include "singleton.h"
@@ -18,5 +20,7 @@ private:
     std::vector<std::shared_ptr<IOContext>> io_contexts_;
     std::vector<WorkPtr> works_;
     std::vector<std::thread> threads_;
-    size_t next_io_context_; // 下一个io_context的索引
+    std::atomic<size_t> next_io_context_; // 下一个io_context的索引
 };
+
+#endif /* IOCONTEXTPOOL_H */

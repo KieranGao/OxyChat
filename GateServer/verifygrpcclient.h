@@ -1,7 +1,11 @@
+#ifndef VERIFYGRPCCLIENT_H
+#define VERIFYGRPCCLIENT_H
+
 #include <grpcpp/grpcpp.h>
 #include "message.grpc.pb.h" 
 #include "global.h"
 #include "singleton.h"
+#include "rpcconnectpool.h"
 
 using grpc::Channel;
 using grpc::ClientContext;
@@ -14,24 +18,10 @@ using message::VerifyService;
 class VerifyGrpcClient : public Singleton<VerifyGrpcClient> {
     friend class Singleton<VerifyGrpcClient>;
 public:
-    GetVerifyRsp getVerifyCode(const std::string& email) {
-        GetVerifyReq request;
-        GetVerifyRsp response;
-        ClientContext context;
-        request.set_email(email);
-        
-        Status status = stub_->GetVerifyCode(&context, request, &response);
-        if (!status.ok()) {
-            std::cerr << "RPC failed: " << status.error_message() << std::endl;
-            response.set_error(static_cast<int32_t>(ErrorCodes::RPC_ERROR));
-        }
-        return response;
-    }
+    GetVerifyRsp getVerifyCode(const std::string& email);
 private:
-    VerifyGrpcClient() {
-        std::shared_ptr<Channel> channel = grpc::CreateChannel("localhost:50051", 
-            grpc::InsecureChannelCredentials());
-        stub_ = VerifyService::NewStub(channel);
-    }
-    std::unique_ptr<VerifyService::Stub> stub_;
+    std::unique_ptr<RPCConnectPool> rpc_pool_;
+    VerifyGrpcClient();
 };
+
+#endif /* VERIFYGRPCCLIENT_H */

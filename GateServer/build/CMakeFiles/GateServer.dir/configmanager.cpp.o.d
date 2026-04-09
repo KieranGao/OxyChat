@@ -1978,4 +1978,5 @@ CMakeFiles/GateServer.dir/configmanager.cpp.o: \
  /usr/include/boost/multi_index/member.hpp \
  /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
  /usr/include/boost/property_tree/ini_parser.hpp \
- /usr/include/boost/property_tree/detail/file_parser_error.hpp
+ /usr/include/boost/property_tree/detail/file_parser_error.hpp \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h

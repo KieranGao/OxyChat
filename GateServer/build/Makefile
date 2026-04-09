@@ -393,6 +393,54 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+rpcconnectpool.o: rpcconnectpool.cpp.o
+.PHONY : rpcconnectpool.o
+
+# target to build an object file
+rpcconnectpool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o
+.PHONY : rpcconnectpool.cpp.o
+
+rpcconnectpool.i: rpcconnectpool.cpp.i
+.PHONY : rpcconnectpool.i
+
+# target to preprocess a source file
+rpcconnectpool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.i
+.PHONY : rpcconnectpool.cpp.i
+
+rpcconnectpool.s: rpcconnectpool.cpp.s
+.PHONY : rpcconnectpool.s
+
+# target to generate assembly for a file
+rpcconnectpool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.s
+.PHONY : rpcconnectpool.cpp.s
+
+verifygrpcclient.o: verifygrpcclient.cpp.o
+.PHONY : verifygrpcclient.o
+
+# target to build an object file
+verifygrpcclient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o
+.PHONY : verifygrpcclient.cpp.o
+
+verifygrpcclient.i: verifygrpcclient.cpp.i
+.PHONY : verifygrpcclient.i
+
+# target to preprocess a source file
+verifygrpcclient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.i
+.PHONY : verifygrpcclient.cpp.i
+
+verifygrpcclient.s: verifygrpcclient.cpp.s
+.PHONY : verifygrpcclient.s
+
+# target to generate assembly for a file
+verifygrpcclient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.s
+.PHONY : verifygrpcclient.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -435,6 +483,12 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... rpcconnectpool.o"
+	@echo "... rpcconnectpool.i"
+	@echo "... rpcconnectpool.s"
+	@echo "... verifygrpcclient.o"
+	@echo "... verifygrpcclient.i"
+	@echo "... verifygrpcclient.s"
 .PHONY : help
 
 

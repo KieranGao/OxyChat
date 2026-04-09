@@ -1,5 +1,6 @@
 #ifndef LOGICSYSTEM_H
 #define LOGICSYSTEM_H
+
 #include "global.h"
 #include "singleton.h"
 #include <unordered_map>

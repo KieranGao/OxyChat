@@ -28,6 +28,8 @@ set(GATESERVER_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/iocontextpool.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/rpcconnectpool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/verifygrpcclient.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/mainserver.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 

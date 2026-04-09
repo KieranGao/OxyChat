@@ -3,7 +3,7 @@
 #include "configmanager.h"
 
 int main() {
-    ConfigManager configManager;
+    ConfigManager& configManager = ConfigManager::getInstance();
     std::string gate_port_str = configManager["GateServer"]["port"];
     std::string verify_port_str = configManager["VerifyService"]["port"];
     unsigned short gate_port = std::atoi(gate_port_str.c_str());
