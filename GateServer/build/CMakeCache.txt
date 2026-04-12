@@ -202,6 +202,12 @@ GateServer_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GateServer_SOURCE_DIR:STATIC=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer
 
+//Path to a file.
+HIREDIS_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+HIREDIS_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libhiredis.so
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 

@@ -39,6 +39,10 @@ set(GATESERVER_SOURCES
 find_package(Protobuf REQUIRED)
 message(STATUS "Using protobuf ${Protobuf_VERSION}")
 
+# 查找hiredis库
+find_path(HIREDIS_INCLUDE_DIR hiredis/hiredis.h)
+find_library(HIREDIS_LIBRARY hiredis)
+
 # 查找gRPC包
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GRPC REQUIRED grpc++)
@@ -48,6 +52,7 @@ message(STATUS "Using gRPC ${GRPC_VERSION}")
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${JSONCPP_INCLUDE_DIR})
 include_directories(${Protobuf_INCLUDE_DIRS})
+include_directories(${HIREDIS_INCLUDE_DIR})
 
 # 设置proto文件路径
 set(PROTO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/message.proto")
@@ -93,4 +98,5 @@ target_link_libraries(${PROJECT_NAME}
     ${Boost_LIBRARIES}
     ${GRPC_LIBRARIES}
     protobuf::libprotobuf
+    ${HIREDIS_LIBRARY}
 )

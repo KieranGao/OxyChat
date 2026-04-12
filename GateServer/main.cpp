@@ -1,6 +1,7 @@
 #include "global.h"
 #include "mainserver.h"
 #include "configmanager.h"
+#include <hiredis/hiredis.h>
 
 int main() {
     ConfigManager& configManager = ConfigManager::getInstance();
@@ -8,7 +9,7 @@ int main() {
     std::string verify_port_str = configManager["VerifyService"]["port"];
     unsigned short gate_port = std::atoi(gate_port_str.c_str());
     unsigned short verify_port = std::atoi(verify_port_str.c_str());
-
+    
     try
     {
         unsigned short port = static_cast<unsigned short>(8080);

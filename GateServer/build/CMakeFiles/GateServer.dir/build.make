@@ -300,6 +300,7 @@ GateServer: CMakeFiles/GateServer.dir/build.make
 GateServer: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
 GateServer: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 GateServer: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+GateServer: /usr/lib/x86_64-linux-gnu/libhiredis.so
 GateServer: CMakeFiles/GateServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable GateServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GateServer.dir/link.txt --verbose=$(VERBOSE)

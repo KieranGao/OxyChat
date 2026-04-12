@@ -10017,7 +10017,12 @@ CMakeFiles/GateServer.dir/main.cpp.o: ../main.cpp \
   /usr/include/boost/multi_index/member.hpp \
   /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
   /usr/include/boost/property_tree/ini_parser.hpp \
-  /usr/include/boost/property_tree/detail/file_parser_error.hpp
+  /usr/include/boost/property_tree/detail/file_parser_error.hpp \
+  /usr/include/hiredis/hiredis.h \
+  /usr/include/hiredis/read.h \
+  /usr/include/hiredis/sds.h \
+  /usr/include/hiredis/alloc.h \
+  /usr/include/c++/13/stdlib.h
 
 CMakeFiles/GateServer.dir/mainserver.cpp.o: ../mainserver.cpp \
   /usr/include/stdc-predef.h \
@@ -16843,6 +16848,10 @@ CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o: ../verifygrpcclient.cpp \
 
 message.pb.h:
 
+/usr/include/hiredis/sds.h:
+
+/usr/include/hiredis/hiredis.h:
+
 ../main.cpp:
 
 ../rpcconnectpool.h:
@@ -17308,6 +17317,8 @@ message.pb.h:
 /usr/include/boost/io_fwd.hpp:
 
 /usr/include/boost/io/ios_state.hpp:
+
+/usr/include/hiredis/alloc.h:
 
 /usr/include/boost/io/quoted.hpp:
 
@@ -18284,6 +18295,8 @@ message.pb.h:
 /usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
 /usr/include/boost/mpl/void_fwd.hpp:
+
+/usr/include/hiredis/read.h:
 
 /usr/include/boost/mpl/lambda_fwd.hpp:
 
