@@ -3,7 +3,6 @@
 RPCConnectPool::RPCConnectPool(size_t pool_size, std::string host, std::string port) 
     : is_running_(true), host_(std::move(host)), port_(std::move(port)), pool_size_(pool_size) 
 {
-    // 构造函数不启动连接池，调用start()函数后才会创建连接
     for(int i=0;i<pool_size;i++) {
         std::shared_ptr<Channel> channel = grpc::CreateChannel(host_ + ":" + port_, grpc::InsecureChannelCredentials());
         stubs_.emplace(VerifyService::NewStub(channel));
@@ -11,12 +10,8 @@ RPCConnectPool::RPCConnectPool(size_t pool_size, std::string host, std::string p
 }
 
 RPCConnectPool::~RPCConnectPool() {
-    std::lock_guard<std::mutex> lock(mutex_);
+    // std::lock_guard<std::mutex> lock(mutex_); 不可加，会产生死锁
     stop();
-    while(!stubs_.empty()) {
-        stubs_.front().reset();
-        stubs_.pop();
-    }
     std::cerr << "RPCConnectPool is destroyed" << std::endl;
 }
 
@@ -43,4 +38,8 @@ void RPCConnectPool::stop() {
     std::lock_guard<std::mutex> lock(mutex_);
     is_running_ = false;
     cond_.notify_all(); // 唤醒所有等待的线程，让它们退出
+    while(!stubs_.empty()) {
+        // stubs_.front().reset(); pop时自动调用
+        stubs_.pop();
+    }
 }

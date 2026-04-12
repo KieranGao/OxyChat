@@ -14,14 +14,17 @@ public:
     bool get(const std::string& key, std::string& value);
     bool del(const std::string& key);
     bool auth(const std::string& password);
+    // 此处是redis中的双端队列操作
     bool lpush(const std::string& key, const std::string& value);
     bool rpush(const std::string& key, const std::string& value);
     bool lpop(const std::string& key, std::string& value);
     bool rpop(const std::string& key, std::string& value);
     bool existskey(const std::string& key);
+    // hset和hget是redis中的hash表操作，hset可以设置一个key下的field和value，hget可以获取一个key下的field对应的value
+    // 形象来说，key->field->value，就像一个二维表一样，key是表名，field是列名，value是数据
     bool hset(const std::string& key, const std::string& field, const std::string& value);
-    bool hset(const char* key, const char* hkey, const char* hvalue, size_t hvaluelen);
-    std::string hget(const std::string &key, const std::string &hkey);
+    bool hset(const char* key, const char* field, const char* value, size_t hvaluelen);
+    std::string hget(const std::string &key, const std::string &field);
     void close();
 private:
     RedisManager();

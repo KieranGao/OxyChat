@@ -161,18 +161,18 @@ bool RedisManager::rpop(const std::string& key, std::string& value) {
     return false;
 }
 
-bool RedisManager::hset(const std::string &key, const std::string &hkey, const std::string &value) {
-    this->reply_ = static_cast<redisReply*>(redisCommand(this->connect_, "HSET %s %s %s", key.c_str(), hkey.c_str(), value.c_str()));
+bool RedisManager::hset(const std::string &key, const std::string &field, const std::string &value) {
+    this->reply_ = static_cast<redisReply*>(redisCommand(this->connect_, "HSET %s %s %s", key.c_str(), field.c_str(), value.c_str()));
     if (this->reply_ == nullptr or this->reply_->type != REDIS_REPLY_INTEGER ) {
-        std::cerr << "Executed command [ HSet " << key << "  " << hkey <<"  " << value << " ] failure ! " << std::endl;
+        std::cerr << "Executed command [ HSet " << key << "  " << field <<"  " << value << " ] failure ! " << std::endl;
         freeReplyObject(this->reply_);
         return false;
     }
-    std::cerr << "Executed command [ HSet " << key << "  " << hkey << "  " << value << " ] success ! " << std::endl;
+    std::cerr << "Executed command [ HSet " << key << "  " << field <<"  " << value << " ] success ! " << std::endl;
     freeReplyObject(this->reply_);
     return true;
 }
-bool RedisManager::hset(const char* key, const char* hkey, const char* hvalue, size_t hvaluelen)
+bool RedisManager::hset(const char* key, const char* field, const char* value, size_t valuelen)
 {
     const char* argv[4];
     size_t argvlen[4];
@@ -180,22 +180,22 @@ bool RedisManager::hset(const char* key, const char* hkey, const char* hvalue, s
     argvlen[0] = 4;
     argv[1] = key;
     argvlen[1] = strlen(key);
-    argv[2] = hkey;
-    argvlen[2] = strlen(hkey);
-    argv[3] = hvalue;
-    argvlen[3] = hvaluelen;
+    argv[2] = field;
+    argvlen[2] = strlen(field);
+    argv[3] = value;
+    argvlen[3] = valuelen;
     this->reply_ = (redisReply*)redisCommandArgv(this->connect_, 4, argv, argvlen);
     if (this->reply_ == nullptr or this->reply_->type != REDIS_REPLY_INTEGER) {
-        std::cerr << "Executed command [ HSet " << key << "  " << hkey << "  " << hvalue << " ] failure ! " << std::endl;
+        std::cerr << "Executed command [ HSet " << key << "  " << field << "  " << value << " ] failure ! " << std::endl;
         freeReplyObject(this->reply_);
         return false;
     }
-    std::cerr << "Executed command [ HSet " << key << "  " << hkey << "  " << hvalue << " ] success ! " << std::endl;
+    std::cerr << "Executed command [ HSet " << key << "  " << field << "  " << value << " ] success ! " << std::endl;
     freeReplyObject(this->reply_);
     return true;
 }
 
-std::string RedisManager::hget(const std::string &key, const std::string &hkey)
+std::string RedisManager::hget(const std::string &key, const std::string &field)
 {
     const char* argv[3];
     size_t argvlen[3];
@@ -203,17 +203,17 @@ std::string RedisManager::hget(const std::string &key, const std::string &hkey)
     argvlen[0] = 4;
     argv[1] = key.c_str();
     argvlen[1] = key.length();
-    argv[2] = hkey.c_str();
-    argvlen[2] = hkey.length();
+    argv[2] = field.c_str();
+    argvlen[2] = field.length();
     this->reply_ = static_cast<redisReply*>(redisCommandArgv(this->connect_, 3, argv, argvlen));
     if (this->reply_ == nullptr || this->reply_->type == REDIS_REPLY_NIL) {
         freeReplyObject(this->reply_);
-        std::cerr << "Executed command [ HGet " << key << " "<< hkey <<"  ] failure ! " << std::endl;
+        std::cerr << "Executed command [ HGet " << key << " "<< field <<"  ] failure ! " << std::endl;
         return "";
     }
     std::string value = this->reply_->str;
     freeReplyObject(this->reply_);
-    std::cerr << "Executed command [ HGet " << key << " " << hkey << " ] success ! " << std::endl;
+    std::cerr << "Executed command [ HGet " << key << " " << field << " ] success ! " << std::endl;
     return value;
 }
 

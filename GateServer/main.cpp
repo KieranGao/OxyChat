@@ -5,7 +5,6 @@
 #include "assert.h"
 #include "redismanager.h"
 
-
 int main() {
     ConfigManager& configManager = ConfigManager::getInstance();
     std::string gate_port_str = configManager["GateServer"]["port"];
