@@ -27,6 +27,7 @@ set(JSONCPP_SOURCES
 set(GATESERVER_SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/iocontextpool.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/redismanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/rpcconnectpool.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/verifygrpcclient.cpp

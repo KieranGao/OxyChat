@@ -393,6 +393,30 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+redismanager.o: redismanager.cpp.o
+.PHONY : redismanager.o
+
+# target to build an object file
+redismanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.o
+.PHONY : redismanager.cpp.o
+
+redismanager.i: redismanager.cpp.i
+.PHONY : redismanager.i
+
+# target to preprocess a source file
+redismanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.i
+.PHONY : redismanager.cpp.i
+
+redismanager.s: redismanager.cpp.s
+.PHONY : redismanager.s
+
+# target to generate assembly for a file
+redismanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.s
+.PHONY : redismanager.cpp.s
+
 rpcconnectpool.o: rpcconnectpool.cpp.o
 .PHONY : rpcconnectpool.o
 
@@ -483,6 +507,9 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... redismanager.o"
+	@echo "... redismanager.i"
+	@echo "... redismanager.s"
 	@echo "... rpcconnectpool.o"
 	@echo "... rpcconnectpool.i"
 	@echo "... rpcconnectpool.s"

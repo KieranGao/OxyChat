@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mainserver.cpp" "CMakeFiles/GateServer.dir/mainserver.cpp.o" "gcc" "CMakeFiles/GateServer.dir/mainserver.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/message.grpc.pb.cc" "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o" "gcc" "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/message.pb.cc" "CMakeFiles/GateServer.dir/message.pb.cc.o" "gcc" "CMakeFiles/GateServer.dir/message.pb.cc.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.cpp" "CMakeFiles/GateServer.dir/redismanager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/redismanager.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/rpcconnectpool.cpp" "CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/verifygrpcclient.cpp" "CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o" "gcc" "CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o.d"
   )
