@@ -4,12 +4,12 @@
 #include <hiredis/hiredis.h>
 #include "singleton.h"
 #include "global.h"
+#include "redisconnectpool.h"
 class RedisManager : public Singleton<RedisManager> {
 
     friend class Singleton<RedisManager>;
 public:
     ~RedisManager();
-    bool connect(const std::string& host, int port);
     bool set(const std::string& key, const std::string& value);
     bool get(const std::string& key, std::string& value);
     bool del(const std::string& key);
@@ -28,8 +28,7 @@ public:
     void close();
 private:
     RedisManager();
-    redisContext* connect_;
-    redisReply* reply_;
+    std::unique_ptr<RedisConnectPool> conn_pool_;
 };
 
 
@@ -40,7 +39,7 @@ private:
 
 void TestRedisManager() {
 
-    assert(RedisManager::getInstance()->connect("127.0.0.1", 6379));
+    // assert(RedisManager::getInstance()->connect("127.0.0.1", 6379));
     assert(RedisManager::getInstance()->auth("123456"));
     assert(RedisManager::getInstance()->set("blogwebsite","KieranGao.github.io"));
     std::string value="";
@@ -59,7 +58,7 @@ void TestRedisManager() {
     assert(RedisManager::getInstance()->rpop("lpushkey1", value));
     assert(RedisManager::getInstance()->lpop("lpushkey1", value));
     assert(RedisManager::getInstance()->lpop("lpushkey2", value)==false);
-    RedisManager::getInstance()->close();
+    // RedisManager::getInstance()->close();
 }
 
 */

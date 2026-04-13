@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o.d"
   "CMakeFiles/GateServer.dir/message.pb.cc.o"
   "CMakeFiles/GateServer.dir/message.pb.cc.o.d"
+  "CMakeFiles/GateServer.dir/redisconnectpool.cpp.o"
+  "CMakeFiles/GateServer.dir/redisconnectpool.cpp.o.d"
   "CMakeFiles/GateServer.dir/redismanager.cpp.o"
   "CMakeFiles/GateServer.dir/redismanager.cpp.o.d"
   "CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o"

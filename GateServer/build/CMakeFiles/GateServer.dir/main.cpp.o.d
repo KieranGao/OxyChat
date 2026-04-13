@@ -1986,4 +1986,6 @@ CMakeFiles/GateServer.dir/main.cpp.o: \
  /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
  /usr/include/hiredis/sds.h /usr/include/hiredis/alloc.h \
  /usr/include/c++/13/stdlib.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.h
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.h \
+ /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h
