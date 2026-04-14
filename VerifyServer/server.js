@@ -1,6 +1,7 @@
 const grpc = require('@grpc/grpc-js');
 const emailModule = require('./email');
 const const_module = require('./const');
+const redis_module = require('./redis');
 const { messageProto: message_proto } = require('./proto');
 
 // call = gprcrequest
@@ -8,10 +9,26 @@ const { messageProto: message_proto } = require('./proto');
 async function GetVerifyCode(call, callback) {
     console.log("email is ", call.request.email)
     try{
-        const { v4: uuidv4 } = await import('uuid');
-        uniqueId = uuidv4();
+        let redis_res = await redis_module.GetRedis(const_module.code_prefix+call.request.email);
+        console.log("redis_res is ", redis_res);
+        let uniqueId = redis_res;
+        if(redis_res == null) {
+            const {v4: uuidv4} = await import('uuid');
+            uniqueId = uuidv4();
+            if(uniqueId.length > 4) {
+                uniqueId = uniqueId.substring(0,4);
+            } 
+            let set_res = await redis_module.SetRedisExpire(const_module.code_prefix+call.request.email, uniqueId, 180);
+            if(!set_res) {
+                callback(null, {
+                    email : call.request.email,
+                    error : const_module.Errors.RedisError
+                });
+                return;
+            }
+        }
         console.log("uniqueId is ", uniqueId)
-        let text_str =  'Your verify code is'+ uniqueId +' Please complete registration within three minutes'
+        let text_str =  'Your verify code is '+ uniqueId +' Please complete registration within three minutes'
         //发送邮件
         let mailOptions = {
             from: 'a2556469280@163.com',
@@ -27,8 +44,6 @@ async function GetVerifyCode(call, callback) {
         callback(null, { email:  call.request.email,
             error:const_module.Errors.Success
         }); 
-
-
     }catch(error){
         console.log("catch error is ", error)
 
