@@ -1822,4 +1822,8 @@ CMakeFiles/GateServer.dir/logicsystem.cpp.o: \
  /usr/include/grpcpp/impl/codegen/stub_options.h \
  /usr/include/grpcpp/impl/codegen/sync_stream.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/rpcconnectpool.h \
- /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h
+ /usr/include/c++/13/queue /usr/include/c++/13/bits/stl_queue.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.h \
+ /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
+ /usr/include/hiredis/sds.h /usr/include/hiredis/alloc.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.h

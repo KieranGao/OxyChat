@@ -25,7 +25,7 @@ public:
     RedisConnectPool(size_t pool_size, std::string host, int port, std::string password);
     ~RedisConnectPool();
     redisPtr getConnection();
-    void returnConnection(redisPtr& connect);
+    void returnConnection(redisPtr connect);
     void stop();
 private:
     std::mutex mutex_;

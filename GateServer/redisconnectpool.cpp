@@ -46,7 +46,7 @@ redisPtr RedisConnectPool::getConnection() {
     return context;
 }
 
-void RedisConnectPool::returnConnection(redisPtr& connect) {
+void RedisConnectPool::returnConnection(redisPtr connect) {
     std::lock_guard<std::mutex> lock(mutex_);
     if(is_running_) {
         connections_.push(std::move(connect));

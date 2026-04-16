@@ -44,12 +44,24 @@ void RegisterDialog::initHttpHandlers()
     Handlers_.insert(ReqId::ID_GET_VERIFY_CODE, [this](const QJsonObject& jsonObj){
         int error = jsonObj["error"].toInt();
         if(error != ErrorCodes::SUCCESS) {
-            ErrorContent(tr("===Invalid JSON arguments==="));
+            ErrorContent(tr("===Unknown errors==="));
             return;
         }
         auto email = jsonObj["email"].toString();
         ValidContent(tr("===The verification code has been sent==="));
         qDebug() << "email is " << email;
+    });
+
+    Handlers_.insert(ReqId::ID_REGISTER, [this](const QJsonObject& jsonObj){
+        int error = jsonObj["error"].toInt();
+        if(error != ErrorCodes::SUCCESS) {
+            ErrorContent(tr("===Invalid arguments==="));
+            return;
+        }
+        auto email = jsonObj["email"].toString();
+        ValidContent(tr("===Registration finished==="));
+        qDebug() << email << " registered!";
+        return;
     });
 }
 
@@ -92,5 +104,44 @@ void RegisterDialog::slot_register_finish(ReqId id, const QString& res, ErrorCod
     QJsonObject jsonObj = jsonDoc.object();
     Handlers_[id](jsonObj);
     return;
+}
+
+
+void RegisterDialog::on_confirmpushbotton_clicked()
+{
+
+    if(ui->usernamelineEdit->text() == ""){
+        ErrorContent(tr("Username cannot be empty!"));
+        return;
+    }
+    if(ui->emaillineEdit->text() == ""){
+        ErrorContent(tr("Email address cannot be empty!"));
+        return;
+    }
+    if(ui->pwdlineEdit->text() == ""){
+        ErrorContent(tr("Password cannot be empty!"));
+        return;
+    }
+    if(ui->pwd2lineEdit->text() == ""){
+        ErrorContent(tr("Plase confirm the password!"));
+        return;
+    }
+    if(ui->pwdlineEdit->text() != ui->pwd2lineEdit->text()){
+        ErrorContent(tr("Password doesn't match the same!"));
+        return;
+    }
+    if(ui->verilineEdit->text() == ""){
+        ErrorContent(tr("Verify code cannot be empty!"));
+        return;
+    }
+    //发送http请求注册用户
+    QJsonObject json_obj;
+    json_obj["user"] = ui->usernamelineEdit->text();
+    json_obj["email"] = ui->emaillineEdit->text();
+    json_obj["password"] = ui->pwdlineEdit->text();
+    json_obj["confirm"] = ui->pwd2lineEdit->text();
+    json_obj["verify_code"] = ui->verilineEdit->text();
+    HttpManager::getInstance()->PostHttpRequest(QUrl(GATESERVER_URL_PREFIX+"/user_register"),
+                                        json_obj, ReqId::ID_REGISTER,Modules::MOD_REGISTER);
 }
 

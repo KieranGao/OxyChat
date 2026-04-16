@@ -35,6 +35,7 @@ signals:
 private slots:
     void on_getveripushButton_clicked();
     void slot_register_finish(ReqId id, const QString& res, ErrorCodes err);
+    void on_confirmpushbotton_clicked();
 
 private:
     QMap<ReqId, std::function<void(const QJsonObject&)>> Handlers_;
