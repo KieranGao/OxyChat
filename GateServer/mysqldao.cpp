@@ -14,10 +14,13 @@ MySQLDao::~MySQLDao() {
     pool_->stop();
 }
 
-int MySQLDao::registerUser(std::string username, std::string email, std::string password) {
+int MySQLDao::registerUser(const std::string& username, const std::string& email, const std::string& password) {
+    // connectionGuard中取出的连接会在生命周期结束时自动返还连接
     auto connection = ConnectionGuard(*pool_, pool_->getConnection());
     try {
         auto& sql_conn = connection.get()->getConn();
+        // 调用存储过程
+        // prepareStatement表示调用的语句带参数
         std::unique_ptr<sql::PreparedStatement> stmt(sql_conn->prepareStatement("CALL reg_user(?,?,?,@result)"));
         stmt->setString(1, username);
         stmt->setString(2, email);
