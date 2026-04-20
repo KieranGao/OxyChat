@@ -2,6 +2,7 @@
 #include "httpconnection.h"
 #include "verifygrpcclient.h"
 #include "redismanager.h"
+#include "mysqlmanager.h"
 // 注册GET请求的URL和对应的回调函数
 void LogicSystem::registerGet(std::string url, HttpHandler handler) {
     getHandlers_[url] = handler; // 将URL和对应的回调函数存储到map中
@@ -85,18 +86,21 @@ LogicSystem::LogicSystem() {
             return;
         }
 
-        //访问redis查找
-        bool user_exist = RedisManager::getInstance()->existskey(jsonData["user"].asString());
-        if (user_exist) {
-            std::cout << " user exist" << std::endl;
+        std::string user = jsonData["user"].asString();
+        std::string email = jsonData["email"].asString();
+        std::string password = jsonData["password"].asString();
+        
+        int uid = MySQLManager::getInstance()->registerUser(user,email,password);
+        if(uid == 0 or uid == -1) {
+            std::cerr << "user or email already exists!" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::USER_ALREADY_EXISTS);
             std::string jsonstr = jsonResp.toStyledString();
-            beast::ostream(connection->resp_.body()) << jsonstr;
+            beast::ostream(connection->resp_.body()) << jsonstr; 
             return;
         }
-
         //否则查找数据库判断用户是否存在
         jsonResp["error"] = 0;
+        jsonResp["uid"] = uid;
         jsonResp["email"] = jsonData["email"];
         jsonResp ["user"] = jsonData["user"].asString();
         jsonResp["password"] = jsonData["password"].asString();

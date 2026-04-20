@@ -10,7 +10,7 @@ public:
     ~MySQLManager() = default;
     int registerUser(const std::string& username, const std::string& email, const std::string& password);
 private:
-    MySQLManager() = default;
+    MySQLManager();
     std::unique_ptr<MySQLDao> dao_;
 };
 

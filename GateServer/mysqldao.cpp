@@ -18,6 +18,7 @@ int MySQLDao::registerUser(const std::string& username, const std::string& email
     // connectionGuard中取出的连接会在生命周期结束时自动返还连接
     auto connection = ConnectionGuard(*pool_, pool_->getConnection());
     try {
+        std::cerr << "registering user : " << username << std::endl;
         auto& sql_conn = connection.get()->getConn();
         // 调用存储过程
         // prepareStatement表示调用的语句带参数
@@ -30,6 +31,7 @@ int MySQLDao::registerUser(const std::string& username, const std::string& email
         std::unique_ptr<sql::Statement> stmtResult(sql_conn->createStatement());
         std::unique_ptr<sql::ResultSet> res(stmtResult->executeQuery("SELECT @result AS result"));
         if (res and res->next()) {
+            std::cerr << "result is : " + std::to_string(res->getInt("result")) << std::endl;
             return res->getInt("result");
         }
         return -1;

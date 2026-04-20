@@ -1826,4 +1826,21 @@ CMakeFiles/GateServer.dir/logicsystem.cpp.o: \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.h \
  /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
  /usr/include/hiredis/sds.h /usr/include/hiredis/alloc.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.h
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqlmanager.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqldao.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqlconnectpool.h \
+ /usr/include/mysql_driver.h /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+ /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/build_config.h /usr/include/cppconn/warning.h \
+ /usr/include/cppconn/sqlstring.h /usr/include/cppconn/variant.h \
+ /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
+ /usr/include/cppconn/connection.h /usr/include/cppconn/statement.h \
+ /usr/include/cppconn/config.h /usr/include/inttypes.h \
+ /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h \
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/resultset.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/this_thread_sleep.h

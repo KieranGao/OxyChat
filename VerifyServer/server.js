@@ -64,4 +64,4 @@ function main() {
     });
 }
 
-main()
+main() 

@@ -4,7 +4,7 @@ project(GateServer CXX)
 # 设置C++标准
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+set(CMAKE_BUILD_TYPE Debug)
 # 设置Boost路径
 set(BOOST_ROOT "/usr/include/boost")
 set(Boost_USE_STATIC_LIBS OFF)
@@ -30,6 +30,9 @@ set(GATESERVER_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/redisconnectpool.cpp 
     ${CMAKE_CURRENT_SOURCE_DIR}/redismanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/mysqlconnectpool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/mysqldao.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/mysqlmanager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/rpcconnectpool.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/verifygrpcclient.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
@@ -50,11 +53,17 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GRPC REQUIRED grpc++)
 message(STATUS "Using gRPC ${GRPC_VERSION}")
 
+# 查找MySQLConnect库
+find_path(MYSQLCPPCONN_INCLUDE_DIR NAMES mysql_driver.h PATHS /usr/include /usr/local/include)
+find_library(MYSQLCPPCONN_LIBRARY NAMES mysqlcppconn PATHS /usr/lib /usr/local/lib /usr/lib/x86_64-linux-gnu)
+
+
 # 包含目录
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${JSONCPP_INCLUDE_DIR})
 include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${HIREDIS_INCLUDE_DIR})
+include_directories(${MYSQLCPPCONN_INCLUDE_DIR})
 
 # 设置proto文件路径
 set(PROTO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/message.proto")
@@ -101,4 +110,5 @@ target_link_libraries(${PROJECT_NAME}
     ${GRPC_LIBRARIES}
     protobuf::libprotobuf
     ${HIREDIS_LIBRARY}
+    ${MYSQLCPPCONN_LIBRARY}
 )

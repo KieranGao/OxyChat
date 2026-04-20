@@ -59,8 +59,9 @@ void RegisterDialog::initHttpHandlers()
             return;
         }
         auto email = jsonObj["email"].toString();
+        auto username = jsonObj["user"].toString();
         ValidContent(tr("===Registration finished==="));
-        qDebug() << email << " registered!";
+        qDebug() << username << ' ' << email << " registered!";
         return;
     });
 }

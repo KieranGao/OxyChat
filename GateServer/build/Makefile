@@ -393,6 +393,78 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+mysqlconnectpool.o: mysqlconnectpool.cpp.o
+.PHONY : mysqlconnectpool.o
+
+# target to build an object file
+mysqlconnectpool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.o
+.PHONY : mysqlconnectpool.cpp.o
+
+mysqlconnectpool.i: mysqlconnectpool.cpp.i
+.PHONY : mysqlconnectpool.i
+
+# target to preprocess a source file
+mysqlconnectpool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.i
+.PHONY : mysqlconnectpool.cpp.i
+
+mysqlconnectpool.s: mysqlconnectpool.cpp.s
+.PHONY : mysqlconnectpool.s
+
+# target to generate assembly for a file
+mysqlconnectpool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.s
+.PHONY : mysqlconnectpool.cpp.s
+
+mysqldao.o: mysqldao.cpp.o
+.PHONY : mysqldao.o
+
+# target to build an object file
+mysqldao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.o
+.PHONY : mysqldao.cpp.o
+
+mysqldao.i: mysqldao.cpp.i
+.PHONY : mysqldao.i
+
+# target to preprocess a source file
+mysqldao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.i
+.PHONY : mysqldao.cpp.i
+
+mysqldao.s: mysqldao.cpp.s
+.PHONY : mysqldao.s
+
+# target to generate assembly for a file
+mysqldao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.s
+.PHONY : mysqldao.cpp.s
+
+mysqlmanager.o: mysqlmanager.cpp.o
+.PHONY : mysqlmanager.o
+
+# target to build an object file
+mysqlmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.o
+.PHONY : mysqlmanager.cpp.o
+
+mysqlmanager.i: mysqlmanager.cpp.i
+.PHONY : mysqlmanager.i
+
+# target to preprocess a source file
+mysqlmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.i
+.PHONY : mysqlmanager.cpp.i
+
+mysqlmanager.s: mysqlmanager.cpp.s
+.PHONY : mysqlmanager.s
+
+# target to generate assembly for a file
+mysqlmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.s
+.PHONY : mysqlmanager.cpp.s
+
 redisconnectpool.o: redisconnectpool.cpp.o
 .PHONY : redisconnectpool.o
 
@@ -531,6 +603,15 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... mysqlconnectpool.o"
+	@echo "... mysqlconnectpool.i"
+	@echo "... mysqlconnectpool.s"
+	@echo "... mysqldao.o"
+	@echo "... mysqldao.i"
+	@echo "... mysqldao.s"
+	@echo "... mysqlmanager.o"
+	@echo "... mysqlmanager.i"
+	@echo "... mysqlmanager.s"
 	@echo "... redisconnectpool.o"
 	@echo "... redisconnectpool.i"
 	@echo "... redisconnectpool.s"

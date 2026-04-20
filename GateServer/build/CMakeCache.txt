@@ -208,6 +208,12 @@ HIREDIS_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 HIREDIS_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libhiredis.so
 
+//Path to a file.
+MYSQLCPPCONN_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+MYSQLCPPCONN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 
