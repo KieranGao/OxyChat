@@ -20,6 +20,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "timerbtn.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -40,14 +41,16 @@ public:
     QHBoxLayout *horizontalLayout_6;
     QLabel *pwdlabel;
     QLineEdit *pwdlineEdit;
+    QPushButton *showpass;
     QHBoxLayout *horizontalLayout_7;
     QLabel *pwd2label2;
     QLineEdit *pwd2lineEdit;
+    QPushButton *showconfirm;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_8;
     QLabel *verlabel;
     QLineEdit *verilineEdit;
-    QPushButton *getveripushButton;
+    TimerBtn *getveripushButton;
     QHBoxLayout *horizontalLayout_9;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *confirmpushbotton;
@@ -153,6 +156,37 @@ public:
 
         horizontalLayout_6->addWidget(pwdlineEdit);
 
+        showpass = new QPushButton(RegisterDialog);
+        showpass->setObjectName("showpass");
+        showpass->setMinimumSize(QSize(20, 20));
+        showpass->setMaximumSize(QSize(20, 20));
+        showpass->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        showpass->setStyleSheet(QString::fromUtf8("QPushButton[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisible.png);\n"
+"}\n"
+"\n"
+"QPushButton[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visible.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visiblehover.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisiblehover.png);\n"
+"}"));
+
+        horizontalLayout_6->addWidget(showpass);
+
 
         verticalLayout->addLayout(horizontalLayout_6);
 
@@ -172,6 +206,36 @@ public:
         pwd2lineEdit->setMaximumSize(QSize(16777215, 25));
 
         horizontalLayout_7->addWidget(pwd2lineEdit);
+
+        showconfirm = new QPushButton(RegisterDialog);
+        showconfirm->setObjectName("showconfirm");
+        showconfirm->setMinimumSize(QSize(20, 20));
+        showconfirm->setMaximumSize(QSize(20, 20));
+        showconfirm->setStyleSheet(QString::fromUtf8("QPushButton[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisible.png);\n"
+"}\n"
+"\n"
+"QPushButton[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visible.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visiblehover.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisiblehover.png);\n"
+"}"));
+
+        horizontalLayout_7->addWidget(showconfirm);
 
 
         verticalLayout->addLayout(horizontalLayout_7);
@@ -197,7 +261,7 @@ public:
 
         horizontalLayout_8->addWidget(verilineEdit);
 
-        getveripushButton = new QPushButton(RegisterDialog);
+        getveripushButton = new TimerBtn(RegisterDialog);
         getveripushButton->setObjectName("getveripushButton");
 
         horizontalLayout_8->addWidget(getveripushButton);
@@ -258,7 +322,9 @@ public:
         usernamelabel->setText(QCoreApplication::translate("RegisterDialog", "Username:", nullptr));
         emaillabel->setText(QCoreApplication::translate("RegisterDialog", "Email:", nullptr));
         pwdlabel->setText(QCoreApplication::translate("RegisterDialog", "Password:", nullptr));
+        showpass->setText(QString());
         pwd2label2->setText(QCoreApplication::translate("RegisterDialog", "Confirm password:", nullptr));
+        showconfirm->setText(QString());
         verlabel->setText(QCoreApplication::translate("RegisterDialog", "Verification code:", nullptr));
         getveripushButton->setText(QCoreApplication::translate("RegisterDialog", "Get code", nullptr));
         confirmpushbotton->setText(QCoreApplication::translate("RegisterDialog", "Confirm", nullptr));

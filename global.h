@@ -23,6 +23,8 @@ enum Modules{
 
 // 用于qss的刷新
 extern std::function<void(QWidget*)> repolish;
+// 用于密码加密存储，使用异或加密
+extern std::function<QString(QString)> xorString;
 
 extern QString GATESERVER_URL_PREFIX;
 

@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(login_dlg_, &LoginDialog::ToRegister, this, &MainWindow::SlotToRegister);
     connect(register_dlg_, &RegisterDialog::CancelToLogin, this, &MainWindow::SlotToLogin);
+    connect(register_dlg_, &RegisterDialog::ConfirmToLogin, this, &MainWindow::SlotToLogin);
 }
 
 MainWindow::~MainWindow()

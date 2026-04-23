@@ -15,8 +15,38 @@ RegisterDialog::RegisterDialog(QWidget *parent)
     // 设置errorlabel的初始状态
     ui->errorlabel->setProperty("state", "normal");
     repolish(ui->errorlabel);
-
     initHttpHandlers();
+
+    ui->pwdlineEdit->setEchoMode(QLineEdit::Password);
+    ui->showpass->setProperty("showpass",false);
+    ui->pwd2lineEdit->setEchoMode(QLineEdit::Password);
+    ui->showconfirm->setProperty("showpass",false);
+    repolish(ui->showpass);
+    repolish(ui->showconfirm);
+
+    connect(ui->showpass, &QPushButton::clicked, this, [=](){
+        bool show = ui->showpass->property("showpass").toBool();
+        show = !show;
+        ui->showpass->setProperty("showpass", show);
+        repolish(ui->showpass);
+        if (show) {
+            ui->pwdlineEdit->setEchoMode(QLineEdit::Normal);
+        } else {
+            ui->pwdlineEdit->setEchoMode(QLineEdit::Password);
+        }
+    });
+
+    connect(ui->showconfirm, &QPushButton::clicked, this, [=](){
+        bool show = ui->showconfirm->property("showpass").toBool();
+        show = !show;
+        ui->showconfirm->setProperty("showpass", show);
+        repolish(ui->showconfirm);
+        if (show) {
+            ui->pwd2lineEdit->setEchoMode(QLineEdit::Normal);
+        } else {
+            ui->pwd2lineEdit->setEchoMode(QLineEdit::Password);
+        }
+    });
 }
 
 RegisterDialog::~RegisterDialog()
@@ -59,9 +89,18 @@ void RegisterDialog::initHttpHandlers()
             return;
         }
         auto email = jsonObj["email"].toString();
-        auto username = jsonObj["user"].toString();
-        ValidContent(tr("===Registration finished==="));
-        qDebug() << username << ' ' << email << " registered!";
+        ValidContent(tr("===Registration finished! Page will return in 3s==="));
+        qDebug() << email << " registered!";
+        QTimer *timer_ = new QTimer(this);
+        // 定时器单次触发
+        timer_->setSingleShot(true);
+        connect(timer_, &QTimer::timeout, this, [this, timer_](){
+            timer_->stop();
+            timer_->deleteLater();
+            emit ConfirmToLogin();
+        });
+        // 3000毫秒
+        timer_->start(3000);
         return;
     });
 }
@@ -139,8 +178,8 @@ void RegisterDialog::on_confirmpushbotton_clicked()
     QJsonObject json_obj;
     json_obj["user"] = ui->usernamelineEdit->text();
     json_obj["email"] = ui->emaillineEdit->text();
-    json_obj["password"] = ui->pwdlineEdit->text();
-    json_obj["confirm"] = ui->pwd2lineEdit->text();
+    json_obj["password"] = xorString(ui->pwdlineEdit->text());
+    json_obj["confirm"] = xorString(ui->pwd2lineEdit->text());
     json_obj["verify_code"] = ui->verilineEdit->text();
     HttpManager::getInstance()->PostHttpRequest(QUrl(GATESERVER_URL_PREFIX+"/user_register"),
                                         json_obj, ReqId::ID_REGISTER,Modules::MOD_REGISTER);

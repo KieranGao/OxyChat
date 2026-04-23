@@ -32,6 +32,7 @@ private:
     void initHttpHandlers();
 signals:
     void CancelToLogin();
+    void ConfirmToLogin();
 private slots:
     void on_getveripushButton_clicked();
     void slot_register_finish(ReqId id, const QString& res, ErrorCodes err);

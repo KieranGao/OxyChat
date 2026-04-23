@@ -236,6 +236,53 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="showpass">
+         <property name="minimumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisible.png);
+}
+
+QPushButton[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visible.png);
+}
+
+QPushButton:hover[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visiblehover.png);
+}
+
+QPushButton:hover[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisiblehover.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -278,6 +325,50 @@
            <width>16777215</width>
            <height>25</height>
           </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="showconfirm">
+         <property name="minimumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisible.png);
+}
+
+QPushButton[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visible.png);
+}
+
+QPushButton:hover[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visiblehover.png);
+}
+
+QPushButton:hover[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisiblehover.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>
@@ -340,7 +431,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="getveripushButton">
+        <widget class="TimerBtn" name="getveripushButton">
          <property name="text">
           <string>Get code</string>
          </property>
@@ -455,6 +546,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TimerBtn</class>
+   <extends>QPushButton</extends>
+   <header>timerbtn.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

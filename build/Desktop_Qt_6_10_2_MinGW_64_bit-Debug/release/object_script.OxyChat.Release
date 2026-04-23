@@ -4,6 +4,7 @@ release/logindialog.o
 release/main.o
 release/mainwindow.o
 release/registerdialog.o
+release/timerbtn.o
 release/qrc_resource.o
 release/moc_httpmanager.o
 release/moc_logindialog.o

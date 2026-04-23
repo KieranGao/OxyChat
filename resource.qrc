@@ -3,5 +3,9 @@
         <file>icons/oxy.jpg</file>
         <file>style/stylesheet.qss</file>
         <file>icons/OxyChatIcon.ico</file>
+        <file>icons/invisible.png</file>
+        <file>icons/visible.png</file>
+        <file>icons/invisiblehover.png</file>
+        <file>icons/visiblehover.png</file>
     </qresource>
 </RCC>
