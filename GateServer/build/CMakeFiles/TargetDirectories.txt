@@ -1,3 +1,0 @@
-/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles/GateServer.dir
-/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles/edit_cache.dir
-/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/CMakeFiles/rebuild_cache.dir
