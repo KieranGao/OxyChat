@@ -1,2 +1,5 @@
 .vscode
 .qtcreator
+build
+GateServer/build
+VerifyServer/node_modules
