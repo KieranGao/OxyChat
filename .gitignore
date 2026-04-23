@@ -3,3 +3,4 @@
 build
 GateServer/build
 VerifyServer/node_modules
+jsoncpp
