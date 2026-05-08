@@ -40,12 +40,15 @@ template <> constexpr inline auto LoginDialog::qt_create_metaobjectdata<qt_meta_
     QtMocHelpers::StringRefStorage qt_stringData {
         "LoginDialog",
         "ToRegister",
-        ""
+        "",
+        "ToReset"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'ToRegister'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'ToReset'
+        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -70,11 +73,14 @@ void LoginDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->ToRegister(); break;
+        case 1: _t->ToReset(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (LoginDialog::*)()>(_a, &LoginDialog::ToRegister, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (LoginDialog::*)()>(_a, &LoginDialog::ToReset, 1))
             return;
     }
 }
@@ -98,14 +104,14 @@ int LoginDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
@@ -114,5 +120,11 @@ int LoginDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void LoginDialog::ToRegister()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void LoginDialog::ToReset()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

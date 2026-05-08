@@ -9,16 +9,19 @@
 enum ReqId {
     ID_GET_VERIFY_CODE = 1, // 获取验证码
     ID_REGISTER = 2, // 注册新用户
+    ID_RESET = 3
 };
 
 enum ErrorCodes{
     SUCCESS = 0,
     ERR_JSON = 1, //Json解析失败
     ERR_NETWORK = 2,
+    ERR_USER_ALREADY_EXISTS = 3
 };
 
 enum Modules{
     MOD_REGISTER = 0,
+    MOD_RESETPASS = 1
 };
 
 // 用于qss的刷新

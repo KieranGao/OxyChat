@@ -193,6 +193,53 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="showpass">
+         <property name="minimumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisible.png);
+}
+
+QPushButton[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visible.png);
+}
+
+QPushButton:hover[showpass = &quot;true&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/visiblehover.png);
+}
+
+QPushButton:hover[showpass = &quot;false&quot;] {
+    border: none;           
+    background-color: transparent;
+    border-image: url(:/icons/invisiblehover.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -214,21 +261,24 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="forgetlabel">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
+        <widget class="QPushButton" name="forgotbtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;           
+    background-color: transparent;
+}
+
+QPushButton:hover{
+	border: none;           
+    background-color: transparent;
+	color:rgb(18, 150, 219);
+}</string>
          </property>
          <property name="text">
-          <string>Forget password? </string>
+          <string>Forget password?</string>
          </property>
         </widget>
        </item>

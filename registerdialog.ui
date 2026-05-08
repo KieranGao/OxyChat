@@ -266,13 +266,13 @@ QPushButton[showpass = &quot;true&quot;] {
     border-image: url(:/icons/visible.png);
 }
 
-QPushButton:hover[showpass = &quot;false&quot;] {
+QPushButton:hover[showpass = &quot;true&quot;] {
     border: none;           
     background-color: transparent;
     border-image: url(:/icons/visiblehover.png);
 }
 
-QPushButton:hover[showpass = &quot;true&quot;] {
+QPushButton:hover[showpass = &quot;false&quot;] {
     border: none;           
     background-color: transparent;
     border-image: url(:/icons/invisiblehover.png);
@@ -342,6 +342,9 @@ QPushButton:hover[showpass = &quot;true&quot;] {
            <height>20</height>
           </size>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton[showpass = &quot;false&quot;] {
     border: none;           
@@ -355,13 +358,13 @@ QPushButton[showpass = &quot;true&quot;] {
     border-image: url(:/icons/visible.png);
 }
 
-QPushButton:hover[showpass = &quot;false&quot;] {
+QPushButton:hover[showpass = &quot;true&quot;] {
     border: none;           
     background-color: transparent;
     border-image: url(:/icons/visiblehover.png);
 }
 
-QPushButton:hover[showpass = &quot;true&quot;] {
+QPushButton:hover[showpass = &quot;false&quot;] {
     border: none;           
     background-color: transparent;
     border-image: url(:/icons/invisiblehover.png);

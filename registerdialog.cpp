@@ -54,6 +54,14 @@ RegisterDialog::~RegisterDialog()
     delete ui;
 }
 
+void RegisterDialog::resetText() {
+    ui->emaillineEdit->clear();
+    ui->verilineEdit->clear();
+    ui->pwd2lineEdit->clear();
+    ui->pwdlineEdit->clear();
+    ui->usernamelineEdit->clear();
+}
+
 void RegisterDialog::ErrorContent(QString &&str)
 {
     ui->errorlabel->setText(str);

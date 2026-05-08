@@ -27,6 +27,7 @@ private:
     Ui::LoginDialog *ui;
 signals:
     void ToRegister();
+    void ToReset();
 };
 
 #endif // LOGINDIALOG_H

@@ -21,7 +21,7 @@ class RegisterDialog : public QDialog
 public:
     explicit RegisterDialog(QWidget *parent = nullptr);
     ~RegisterDialog();
-
+    void resetText();
 private:
     Ui::RegisterDialog *ui;
 

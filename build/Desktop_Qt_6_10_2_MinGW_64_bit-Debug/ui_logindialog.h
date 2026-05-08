@@ -37,9 +37,10 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *passwordlabel;
     QLineEdit *passwordlineEdit;
+    QPushButton *showpass;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer;
-    QLabel *forgetlabel;
+    QPushButton *forgotbtn;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_2;
@@ -131,6 +132,37 @@ public:
 
         horizontalLayout_4->addWidget(passwordlineEdit);
 
+        showpass = new QPushButton(LoginDialog);
+        showpass->setObjectName("showpass");
+        showpass->setMinimumSize(QSize(20, 20));
+        showpass->setMaximumSize(QSize(20, 20));
+        showpass->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        showpass->setStyleSheet(QString::fromUtf8("QPushButton[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisible.png);\n"
+"}\n"
+"\n"
+"QPushButton[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visible.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"true\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/visiblehover.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover[showpass = \"false\"] {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"    border-image: url(:/icons/invisiblehover.png);\n"
+"}"));
+
+        horizontalLayout_4->addWidget(showpass);
+
 
         verticalLayout->addLayout(horizontalLayout_4);
 
@@ -141,12 +173,21 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer);
 
-        forgetlabel = new QLabel(LoginDialog);
-        forgetlabel->setObjectName("forgetlabel");
-        forgetlabel->setMinimumSize(QSize(0, 25));
-        forgetlabel->setMaximumSize(QSize(16777215, 25));
+        forgotbtn = new QPushButton(LoginDialog);
+        forgotbtn->setObjectName("forgotbtn");
+        forgotbtn->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        forgotbtn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    border: none;           \n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	border: none;           \n"
+"    background-color: transparent;\n"
+"	color:rgb(18, 150, 219);\n"
+"}"));
 
-        horizontalLayout_5->addWidget(forgetlabel);
+        horizontalLayout_5->addWidget(forgotbtn);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -214,7 +255,8 @@ public:
         imagelabel->setText(QString());
         userlabel->setText(QCoreApplication::translate("LoginDialog", "Username:", nullptr));
         passwordlabel->setText(QCoreApplication::translate("LoginDialog", "Password:", nullptr));
-        forgetlabel->setText(QCoreApplication::translate("LoginDialog", "Forget password? ", nullptr));
+        showpass->setText(QString());
+        forgotbtn->setText(QCoreApplication::translate("LoginDialog", "Forget password?", nullptr));
         LoginpushButton->setText(QCoreApplication::translate("LoginDialog", "Login", nullptr));
         RegisterpushButton->setText(QCoreApplication::translate("LoginDialog", "Register", nullptr));
     } // retranslateUi
