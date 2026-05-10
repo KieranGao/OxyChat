@@ -43,6 +43,7 @@ ResetDialog::ResetDialog(QWidget *parent)
             ui->pwd2lineEdit->setEchoMode(QLineEdit::Password);
         }
     });
+    initHttpHandlers();
 }
 
 ResetDialog::~ResetDialog()
@@ -89,13 +90,14 @@ void ResetDialog::initHttpHandlers()
 
     Handlers_.insert(ReqId::ID_RESET, [this](const QJsonObject& jsonObj){
         int error = jsonObj["error"].toInt();
+        qDebug() << "ID_RESET";
         if(error != ErrorCodes::SUCCESS) {
-            ErrorContent(tr("===Invalid arguments==="));
+            ErrorContent(tr("===Error! Verify code may not match or username or email maybe not exist!==="));
             return;
         }
-        auto email = jsonObj["email"].toString();
+        auto username = jsonObj["user"].toString();
         ValidContent(tr("===Password reset process finished! Page will return in 3s==="));
-        qDebug() << email << " registered!";
+        qDebug() << username << " password reseted!";
         QTimer *timer_ = new QTimer(this);
         // 定时器单次触发
         timer_->setSingleShot(true);
@@ -122,8 +124,8 @@ void ResetDialog::on_getveripushButton_clicked()
         //发送http请求获取验证码
         QJsonObject json_obj;
         json_obj["email"] = email;
+        qDebug() << email;
         HttpManager::getInstance()->PostHttpRequest(QUrl(GATESERVER_URL_PREFIX + "/get_verify_code"), json_obj, ReqId::ID_GET_VERIFY_CODE, Modules::MOD_RESETPASS);
-
     }else{
         ErrorContent(tr("===Invalid email address==="));
     }
@@ -152,9 +154,8 @@ void ResetDialog::slot_reset_finish(ReqId id, const QString& res, ErrorCodes err
 }
 
 
-void ResetDialog::on_confirmpushbotton_clicked()
+void ResetDialog::on_confirmbtn_clicked()
 {
-
     if(ui->namelineEdit->text() == ""){
         ErrorContent(tr("Username cannot be empty!"));
         return;
@@ -180,6 +181,7 @@ void ResetDialog::on_confirmpushbotton_clicked()
         return;
     }
     //发送http请求修改密码
+    qDebug() << "RESET START POST HTTP REQUEST!";
     QJsonObject json_obj;
     json_obj["user"] = ui->namelineEdit->text();
     json_obj["email"] = ui->emaillineedit->text();

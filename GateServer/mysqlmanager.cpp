@@ -8,3 +8,8 @@ int MySQLManager::registerUser(const std::string& username, const std::string& e
     int ret = dao_->registerUser(username, email, password);
     return ret; 
 }
+
+bool MySQLManager::userResetpass(const std::string username, const std::string& email, const std::string& new_password) {
+    bool ret = dao_->userResetpass(username, email, new_password);
+    return ret;
+}

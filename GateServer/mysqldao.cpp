@@ -42,3 +42,38 @@ int MySQLDao::registerUser(const std::string& username, const std::string& email
         return -1;
     }
 }
+
+bool MySQLDao::userResetpass(const std::string& username, const std::string& email, const std::string& new_password) {
+    auto connection = ConnectionGuard(*pool_, pool_->getConnection());
+    try {
+        std::cerr << "Resetting password for user: " << username << std::endl;
+        auto& sql_conn = connection.get()->getConn();
+        // 先查询用户名和邮箱是否匹配存在
+        std::string check_sql = "SELECT uid FROM user WHERE name = ? AND email = ?";
+        std::unique_ptr<sql::PreparedStatement> pstmt_check(sql_conn->prepareStatement(check_sql));
+        pstmt_check->setString(1, username);
+        pstmt_check->setString(2, email);
+        std::unique_ptr<sql::ResultSet> res(pstmt_check->executeQuery());
+        // 没有匹配到记录返回 false
+        // 分别对应没有查找到结果集或者结果集为空
+        if(!res or !res->next()) {
+            std::cerr << "Error: Username and email do not match or not exist." << std::endl;
+            return false;
+        }
+        // 匹配成功 → 更新密码
+        std::string update_sql = "UPDATE user SET password = ? WHERE name = ? AND email = ?";
+        std::unique_ptr<sql::PreparedStatement> pstmt_update(sql_conn->prepareStatement(update_sql));
+        pstmt_update->setString(1, new_password);
+        pstmt_update->setString(2, username);
+        pstmt_update->setString(3, email);
+        pstmt_update->executeUpdate();
+        std::cerr << "Success: Password reset for user: " << username << std::endl;
+        return true;
+    } 
+    catch (sql::SQLException& exp) {
+        std::cerr << "SQLException: " << exp.what();
+        std::cerr << " (MySQL error code: " << exp.getErrorCode();
+        std::cerr << ", SQLState: " << exp.getSQLState() << " )" << std::endl;
+        return false;
+    }
+}

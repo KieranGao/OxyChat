@@ -22,6 +22,7 @@ enum class ErrorCodes {
     RPC_ERROR = 1002,
     VERIFY_CODE_EXPIRED = 1003,
     USER_ALREADY_EXISTS = 1004,
+    USER_DO_NOT_EXISTS = 1005
 };
 
 // class ConfigManager;

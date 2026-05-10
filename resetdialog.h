@@ -25,7 +25,8 @@ signals:
 private slots:
     void on_getveripushButton_clicked();
     void slot_reset_finish(ReqId id, const QString& res, ErrorCodes err);
-    void on_confirmpushbotton_clicked();
+    void on_confirmbtn_clicked();
+
 private:
     Ui::ResetDialog *ui;
 private:

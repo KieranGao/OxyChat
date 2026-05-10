@@ -29,10 +29,11 @@ void HttpManager::PostHttpRequest(const QUrl& url, QJsonObject json, ReqId req_i
             reply->deleteLater(); // 调用deleteLater()后，当reply不再使用时Qt会自动回收
             return;
         }
+        qDebug() << "Http request posted!";
         //无错误则读回请求
         QString res = reply->readAll();
         //发送信号通知完成
-        emit self->signal_http_finish(req_id, res, ErrorCodes::SUCCESS,mod);
+        emit self->signal_http_finish(req_id, res, ErrorCodes::SUCCESS, mod);
         reply->deleteLater();
         return;
     });

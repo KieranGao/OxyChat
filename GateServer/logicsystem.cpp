@@ -110,6 +110,62 @@ LogicSystem::LogicSystem() {
         beast::ostream(connection->resp_.body()) << jsonstr;
     });
 
+    registerPost("/user_resetpass",[](std::shared_ptr<HttpConnection> connection){
+        auto body = beast::buffers_to_string(connection->req_.body().data());
+        std::cerr << "Recieved POST data: " << body << std::endl;
+        connection->resp_.set(http::field::content_type, "application/json");
+        Json::Value jsonData;
+        Json::Reader jsonReader;
+        Json::Value jsonResp;
+        // 解析body中的JSON数据，如果解析失败则返回错误信息，成功则jsonData中存储解析后的数据
+        bool parse_success = jsonReader.parse(body, jsonData);
+        if(!parse_success) {
+            std::cerr << "JSON parse error!"<< std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::JSON_PARSE_ERROR);
+            auto jsonRespstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonRespstr;
+            return;   
+        }
+        
+        std::string verify_code;
+        bool valid_code = RedisManager::getInstance()->get(CODE_PREFIX + jsonData["email"].asString(), verify_code);
+        if(!valid_code) {
+            std::cerr << "Verify code expired" << std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::VERIFY_CODE_EXPIRED);
+            std::string jsonstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonstr;
+            return;
+        }
+      
+        if (verify_code != jsonData["verify_code"].asString()) {
+            std::cerr << "Verify code error" << std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::VERIFY_CODE_EXPIRED);
+            std::string jsonstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonstr;
+            return;
+        }
+
+        std::string user = jsonData["user"].asString();
+        std::string email = jsonData["email"].asString();
+        std::string new_password = jsonData["password"].asString();
+        
+        bool ret = MySQLManager::getInstance()->userResetpass(user,email,new_password);
+        if(!ret) {
+            std::cerr << "Error : user or email do not exists!" << std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::USER_DO_NOT_EXISTS);
+            std::string jsonstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonstr; 
+            return;
+        }
+        jsonResp["error"] = 0;
+        jsonResp["email"] = jsonData["email"];
+        jsonResp ["user"] = jsonData["user"].asString();
+        jsonResp["password"] = jsonData["password"].asString();
+        jsonResp["confirm"] = jsonData["confirm"].asString();
+        jsonResp["verify_code"] = jsonData["verify_code"].asString();
+        std::string jsonstr = jsonResp.toStyledString();
+        beast::ostream(connection->resp_.body()) << jsonstr;
+    });
 
 }
 
