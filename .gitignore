@@ -1,6 +1,6 @@
 .vscode
 .qtcreator
 build
-# GateServer/build
+GateServer/build
 # VerifyServer/node_modules
 # jsoncpp
