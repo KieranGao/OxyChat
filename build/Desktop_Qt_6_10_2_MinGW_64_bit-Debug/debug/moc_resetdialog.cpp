@@ -49,7 +49,7 @@ template <> constexpr inline auto ResetDialog::qt_create_metaobjectdata<qt_meta_
         "res",
         "ErrorCodes",
         "err",
-        "on_confirmpushbotton_clicked"
+        "on_confirmbtn_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -63,7 +63,7 @@ template <> constexpr inline auto ResetDialog::qt_create_metaobjectdata<qt_meta_
         QtMocHelpers::SlotData<void(ReqId, const QString &, ErrorCodes)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { 0x80000000 | 6, 7 }, { QMetaType::QString, 8 }, { 0x80000000 | 9, 10 },
         }}),
-        // Slot 'on_confirmpushbotton_clicked'
+        // Slot 'on_confirmbtn_clicked'
         QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
@@ -92,7 +92,7 @@ void ResetDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 1: _t->ConfirmToLogin(); break;
         case 2: _t->on_getveripushButton_clicked(); break;
         case 3: _t->slot_reset_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
-        case 4: _t->on_confirmpushbotton_clicked(); break;
+        case 4: _t->on_confirmbtn_clicked(); break;
         default: ;
         }
     }

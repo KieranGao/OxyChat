@@ -33,6 +33,7 @@ signals:
     void signal_http_finish(ReqId id,const QString& res, ErrorCodes err, Modules mod);
     void signal_register_finish(ReqId id, const QString& res, ErrorCodes err);
     void signal_reset_finish(ReqId id, const QString& res, ErrorCodes err);
+    void signal_login_finish(ReqId id, const QString& res, ErrorCodes err);
 };
 
 #endif // HTTPMANAGER_H

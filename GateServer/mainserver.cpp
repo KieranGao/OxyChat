@@ -2,11 +2,12 @@
 #include "iocontextpool.h"
 MainServer::MainServer(boost::asio::io_context& ioc, unsigned short port)
     : acceptor_(ioc, tcp::endpoint(tcp::v4(), port)),
-      ioc_(ioc) {}
+      ioc_(ioc) {
+        std::cerr << "GateServer is listening on port: " << acceptor_.local_endpoint().port() << std::endl;
+      }
 
 void MainServer::start()
 {    
-    std::cerr << "GateServer is listening on port: " << acceptor_.local_endpoint().port() << std::endl;
     // 延长对象生命周期到回调执行时，否则在回调执行时对象可能已经被销毁了
     auto self = shared_from_this();
     auto& io_context_ = IOContextPool::getInstance()->getIOContext();

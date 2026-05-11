@@ -170,6 +170,10 @@ void RegisterDialog::on_confirmpushbotton_clicked()
         ErrorContent(tr("Password cannot be empty!"));
         return;
     }
+    if(ui->pwdlineEdit->text().size() < 6){
+        ErrorContent(tr("Password too short!"));
+        return;
+    }
     if(ui->pwd2lineEdit->text() == ""){
         ErrorContent(tr("Plase confirm the password!"));
         return;

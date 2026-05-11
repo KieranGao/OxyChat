@@ -47,4 +47,7 @@ void HttpManager::slot_http_finish(ReqId id, const QString &res, ErrorCodes err,
     else if(mod == Modules::MOD_RESETPASS) {
         emit signal_reset_finish(id, res, err);
     }
+    else if(mod == Modules::MOD_LOGIN) {
+        emit signal_login_finish(id, res, err);
+    }
 }

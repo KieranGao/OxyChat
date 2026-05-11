@@ -31,6 +31,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *imagelabel;
     QSpacerItem *verticalSpacer;
+    QLabel *errorlabel;
     QHBoxLayout *horizontalLayout_2;
     QLabel *userlabel;
     QLineEdit *userlineEdit;
@@ -94,6 +95,13 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout->addItem(verticalSpacer);
+
+        errorlabel = new QLabel(LoginDialog);
+        errorlabel->setObjectName("errorlabel");
+        errorlabel->setMaximumSize(QSize(16777215, 25));
+        errorlabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout->addWidget(errorlabel);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
@@ -253,7 +261,8 @@ public:
     {
         LoginDialog->setWindowTitle(QCoreApplication::translate("LoginDialog", "Dialog", nullptr));
         imagelabel->setText(QString());
-        userlabel->setText(QCoreApplication::translate("LoginDialog", "Username:", nullptr));
+        errorlabel->setText(QString());
+        userlabel->setText(QCoreApplication::translate("LoginDialog", "email:", nullptr));
         passwordlabel->setText(QCoreApplication::translate("LoginDialog", "Password:", nullptr));
         showpass->setText(QString());
         forgotbtn->setText(QCoreApplication::translate("LoginDialog", "Forget password?", nullptr));

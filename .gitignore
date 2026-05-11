@@ -1,5 +1,6 @@
 .vscode
 .qtcreator
+.claude
 build
 GateServer/build
 # VerifyServer/node_modules

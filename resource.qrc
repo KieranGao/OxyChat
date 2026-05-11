@@ -7,5 +7,6 @@
         <file>icons/visible.png</file>
         <file>icons/invisiblehover.png</file>
         <file>icons/visiblehover.png</file>
+        <file>avatars/profile.jpg</file>
     </qresource>
 </RCC>

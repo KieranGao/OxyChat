@@ -51,6 +51,7 @@ template <> constexpr inline auto HttpManager::qt_create_metaobjectdata<qt_meta_
         "mod",
         "signal_register_finish",
         "signal_reset_finish",
+        "signal_login_finish",
         "slot_http_finish"
     };
 
@@ -67,8 +68,12 @@ template <> constexpr inline auto HttpManager::qt_create_metaobjectdata<qt_meta_
         QtMocHelpers::SignalData<void(ReqId, const QString &, ErrorCodes)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 3, 4 }, { QMetaType::QString, 5 }, { 0x80000000 | 6, 7 },
         }}),
+        // Signal 'signal_login_finish'
+        QtMocHelpers::SignalData<void(ReqId, const QString &, ErrorCodes)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 4 }, { QMetaType::QString, 5 }, { 0x80000000 | 6, 7 },
+        }}),
         // Slot 'slot_http_finish'
-        QtMocHelpers::SlotData<void(ReqId, const QString &, ErrorCodes, Modules)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(ReqId, const QString &, ErrorCodes, Modules)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { 0x80000000 | 3, 4 }, { QMetaType::QString, 5 }, { 0x80000000 | 6, 7 }, { 0x80000000 | 8, 9 },
         }}),
     };
@@ -97,7 +102,8 @@ void HttpManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->signal_http_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<Modules>>(_a[4]))); break;
         case 1: _t->signal_register_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
         case 2: _t->signal_reset_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
-        case 3: _t->slot_http_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<Modules>>(_a[4]))); break;
+        case 3: _t->signal_login_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
+        case 4: _t->slot_http_finish((*reinterpret_cast<std::add_pointer_t<ReqId>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<ErrorCodes>>(_a[3])),(*reinterpret_cast<std::add_pointer_t<Modules>>(_a[4]))); break;
         default: ;
         }
     }
@@ -107,6 +113,8 @@ void HttpManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         if (QtMocHelpers::indexOfMethod<void (HttpManager::*)(ReqId , const QString & , ErrorCodes )>(_a, &HttpManager::signal_register_finish, 1))
             return;
         if (QtMocHelpers::indexOfMethod<void (HttpManager::*)(ReqId , const QString & , ErrorCodes )>(_a, &HttpManager::signal_reset_finish, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (HttpManager::*)(ReqId , const QString & , ErrorCodes )>(_a, &HttpManager::signal_login_finish, 3))
             return;
     }
 }
@@ -134,14 +142,14 @@ int HttpManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
@@ -162,5 +170,11 @@ void HttpManager::signal_register_finish(ReqId _t1, const QString & _t2, ErrorCo
 void HttpManager::signal_reset_finish(ReqId _t1, const QString & _t2, ErrorCodes _t3)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1, _t2, _t3);
+}
+
+// SIGNAL 3
+void HttpManager::signal_login_finish(ReqId _t1, const QString & _t2, ErrorCodes _t3)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1, _t2, _t3);
 }
 QT_WARNING_POP

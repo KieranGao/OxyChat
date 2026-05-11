@@ -301,7 +301,6 @@ DIST          = ../../config.ini \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/spec_post.prf \
-		../../.qmake.stash \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -572,7 +571,6 @@ Makefile: ../../OxyChat.pro /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -822,7 +820,6 @@ Makefile: ../../OxyChat.pro /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/qt_config.prf:
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/toolchain.prf:
 /home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -898,6 +895,7 @@ compiler_rcc_clean:
 qrc_resource.cpp: ../../resource.qrc \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/libexec/rcc \
 		../../style/stylesheet.qss \
+		../../avatars/profile.jpg \
 		../../icons/oxy.jpg \
 		../../icons/invisiblehover.png \
 		../../icons/invisible.png \
@@ -1369,6 +1367,12 @@ moc_logindialog.cpp: ../../logindialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qinputmethod.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qlocale.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../global.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStyle \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstyle.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
 		moc_predefs.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/libexec/moc
 	/home/oxythecrack/Qt/6.11.0/gcc_64/libexec/moc $(DEFINES) --include /home/oxythecrack/OneDrive/QtProject/OxyChat/build/unknown-Debug/moc_predefs.h -I/home/oxythecrack/Qt/6.11.0/gcc_64/mkspecs/linux-g++ -I/home/oxythecrack/OneDrive/QtProject/OxyChat -I/home/oxythecrack/Qt/6.11.0/gcc_64/include -I/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets -I/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui -I/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork -I/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore -I. -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../logindialog.h -o moc_logindialog.cpp
@@ -1578,13 +1582,13 @@ moc_mainwindow.cpp: ../../mainwindow.h \
 		../../logindialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QDialog \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qdialog.h \
-		../../registerdialog.h \
 		../../global.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStyle \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstyle.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
+		../../registerdialog.h \
 		../../resetdialog.h \
 		moc_predefs.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/libexec/moc
@@ -3115,37 +3119,65 @@ logindialog.o: ../../logindialog.cpp ../../logindialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qinputmethod.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qlocale.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_logindialog.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QApplication \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qapplication.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QHBoxLayout \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qboxlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qgridlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLabel \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlabel.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qframe.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpicture.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextdocument.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLineEdit \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextcursor.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextformat.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpen.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextoption.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QPushButton \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QSpacerItem \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QVBoxLayout \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
 		../../global.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStyle \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstyle.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
+		ui_logindialog.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QJsonObject \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsonobject.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcborvalue.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcborcommon.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qdatetime.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcalendar.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/quuid.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsondocument.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsonparseerror.h \
+		../../httpmanager.h \
+		../../singleton.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QString \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QUrl \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QNetworkAccessManager \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qtnetworkexports.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qhttpheaders.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qmetaobject.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QSharedDataPointer \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/q26numeric.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QSslConfiguration \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslconfiguration.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslsocket.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qtcpsocket.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qhostaddress.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslerror.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslcertificate.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcryptographichash.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qssl.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QFlags \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QMetaType \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QNetworkReply \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qnetworkreply.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QIODevice \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QNetworkRequest \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QByteArray \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QJsonDocument \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QPixmap \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QPainter \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpainter.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextoption.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpen.h \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QPainterPath \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpainterpath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o logindialog.o ../../logindialog.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
@@ -3353,13 +3385,13 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../logindialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QDialog \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qdialog.h \
-		../../registerdialog.h \
 		../../global.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStyle \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstyle.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
+		../../registerdialog.h \
 		../../resetdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QApplication \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qapplication.h \
@@ -3583,23 +3615,15 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../logindialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QDialog \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qdialog.h \
-		../../registerdialog.h \
 		../../global.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QWidget \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStyle \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstyle.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
+		../../registerdialog.h \
 		../../resetdialog.h \
 		ui_mainwindow.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QApplication \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qapplication.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QMenuBar \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qmenubar.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qmenu.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QStatusBar \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qstatusbar.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QVBoxLayout \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qboxlayout.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayout.h \
@@ -3815,36 +3839,6 @@ registerdialog.o: ../../registerdialog.cpp ../../registerdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
 		ui_registerdialog.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QIcon \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QApplication \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qapplication.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QHBoxLayout \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qboxlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qgridlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLabel \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlabel.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qframe.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpicture.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextdocument.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLineEdit \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextcursor.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextformat.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpen.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextoption.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QPushButton \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QSpacerItem \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../timerbtn.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QTimer \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qtimer.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QMouseEvent \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QDebug \
 		../../httpmanager.h \
 		../../singleton.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QString \
@@ -3860,6 +3854,7 @@ registerdialog.o: ../../registerdialog.cpp ../../registerdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcalendar.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qmetaobject.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QSharedDataPointer \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/q26numeric.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QSslConfiguration \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslconfiguration.h \
@@ -4099,35 +4094,6 @@ resetdialog.o: ../../resetdialog.cpp ../../resetdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QRegularExpression \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qregularexpression.h \
 		ui_resetdialog.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QApplication \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qapplication.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QHBoxLayout \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qboxlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlayoutitem.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qgridlayout.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLabel \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlabel.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qframe.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpicture.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextdocument.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QLineEdit \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextcursor.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextformat.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qpen.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/qtextoption.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QPushButton \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QSpacerItem \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../timerbtn.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QTimer \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qtimer.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtGui/QMouseEvent \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QDebug \
 		../../httpmanager.h \
 		../../singleton.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QString \
@@ -4143,6 +4109,7 @@ resetdialog.o: ../../resetdialog.cpp ../../resetdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qcalendar.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qmetaobject.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QSharedDataPointer \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QVariant \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/q26numeric.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/QSslConfiguration \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtNetwork/qsslconfiguration.h \
@@ -4171,7 +4138,9 @@ resetdialog.o: ../../resetdialog.cpp ../../resetdialog.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/quuid.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsondocument.h \
 		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qjsonparseerror.h \
-		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QJsonDocument
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QJsonDocument \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/QTimer \
+		/home/oxythecrack/Qt/6.11.0/gcc_64/include/QtCore/qtimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o resetdialog.o ../../resetdialog.cpp
 
 timerbtn.o: ../../timerbtn.cpp ../../timerbtn.h \
