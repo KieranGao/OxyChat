@@ -22,6 +22,7 @@ int MySQLDao::registerUser(const std::string& username, const std::string& email
         auto& sql_conn = connection.get()->getConn();
         // 调用存储过程
         // prepareStatement表示调用的语句带参数
+        // 用户输入的参数统一使用preparestatement防止SQL注入
         std::unique_ptr<sql::PreparedStatement> stmt(sql_conn->prepareStatement("CALL reg_user(?,?,?,@result)"));
         stmt->setString(1, username);
         stmt->setString(2, email);
@@ -29,13 +30,14 @@ int MySQLDao::registerUser(const std::string& username, const std::string& email
         stmt->execute();
 
         std::unique_ptr<sql::Statement> stmtResult(sql_conn->createStatement());
+        // 非用户输入可以直接用executeQuery
         std::unique_ptr<sql::ResultSet> res(stmtResult->executeQuery("SELECT @result AS result"));
         if (res and res->next()) {
             std::cerr << "result is : " + std::to_string(res->getInt("result")) << std::endl;
             return res->getInt("result");
         }
         return -1;
-    } catch(sql::SQLException& exp) {
+    } catch(const sql::SQLException& exp) {
         std::cerr << "SQLException: " << exp.what();
         std::cerr << " (MySQL error code: " << exp.getErrorCode();
         std::cerr << ", SQLState: " << exp.getSQLState() << " )" << std::endl;
@@ -49,7 +51,7 @@ bool MySQLDao::userResetpass(const std::string& username, const std::string& ema
         std::cerr << "Resetting password for user: " << username << std::endl;
         auto& sql_conn = connection.get()->getConn();
         // 先查询用户名和邮箱是否匹配存在
-        std::string check_sql = "SELECT uid FROM user WHERE name = ? AND email = ?";
+        std::string check_sql = "SELECT 1 FROM user WHERE name = ? AND email = ? LIMIT 1";
         std::unique_ptr<sql::PreparedStatement> pstmt_check(sql_conn->prepareStatement(check_sql));
         pstmt_check->setString(1, username);
         pstmt_check->setString(2, email);
@@ -70,7 +72,36 @@ bool MySQLDao::userResetpass(const std::string& username, const std::string& ema
         std::cerr << "Success: Password reset for user: " << username << std::endl;
         return true;
     } 
-    catch (sql::SQLException& exp) {
+    catch (const sql::SQLException& exp) {
+        std::cerr << "SQLException: " << exp.what();
+        std::cerr << " (MySQL error code: " << exp.getErrorCode();
+        std::cerr << ", SQLState: " << exp.getSQLState() << " )" << std::endl;
+        return false;
+    }
+}
+
+bool MySQLDao::checkLogin(const std::string& email, const std::string& password, UserInfo& userinfo) {
+    auto connection = ConnectionGuard(*pool_, pool_->getConnection());
+    try {
+        std::cerr << "User: " << email << " is logging in!" << std::endl;
+        auto& sql_conn = connection.get()->getConn();
+        std::string query = "SELECT uid, name FROM user WHERE email = ? AND password = ? LIMIT 1";
+        std::unique_ptr<sql::PreparedStatement> pstmt(sql_conn->prepareStatement(query));
+        pstmt->setString(1, email);
+        pstmt->setString(2, password);
+        std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+        if(!res or !res->next()) {
+            std::cerr << "Error: password and email do not match or user not exist." << std::endl;
+            return false;
+        }
+        userinfo.email = email;
+        userinfo.username = res->getString("name");
+        userinfo.password = password;
+        userinfo.uid = res->getInt("uid");
+        std::cerr << "user: " << email << " has login!" << std::endl;
+        return true;
+
+    } catch(const sql::SQLException& exp) {
         std::cerr << "SQLException: " << exp.what();
         std::cerr << " (MySQL error code: " << exp.getErrorCode();
         std::cerr << ", SQLState: " << exp.getSQLState() << " )" << std::endl;

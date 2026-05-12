@@ -167,6 +167,43 @@ LogicSystem::LogicSystem() {
         beast::ostream(connection->resp_.body()) << jsonstr;
     });
 
+    registerPost("/user_login", [](std::shared_ptr<HttpConnection> connection) {
+        auto body = beast::buffers_to_string(connection->req_.body().data());
+        std::cerr << "Recieved POST data: " << body << std::endl;
+        connection->resp_.set(http::field::content_type, "application/json");
+        Json::Value jsonData;
+        Json::Reader jsonReader;
+        Json::Value jsonResp;
+        bool parse_success = jsonReader.parse(body, jsonData);
+        if(!parse_success) {
+            std::cerr << "JSON parse error!"<< std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::JSON_PARSE_ERROR);
+            auto jsonRespstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonRespstr;
+            return;   
+        }
+        auto email = jsonData["email"].asString();
+        auto password = jsonData["password"].asString();
+        UserInfo userinfo;
+        bool ret = MySQLManager::getInstance()->checkLogin(email, password, userinfo);
+        if(!ret) {
+            std::cerr << "Error : user do not exists or password do not match!" << std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::USER_LOGIN_ERROR);
+            std::string jsonstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonstr; 
+            return;
+        }
+        jsonResp["error"] = 0;
+        jsonResp["email"] = userinfo.email;
+        jsonResp["username"] = userinfo.username; 
+        jsonResp["uid"] = userinfo.uid;
+        // jsonResp["token"] = "";
+        // jsonResp["host"] = "";
+        std::cerr << "user: " << userinfo.username << " has login!\n";
+        std::string jsonstr = jsonResp.toStyledString();
+        beast::ostream(connection->resp_.body()) << jsonstr;
+    });
+
 }
 
 bool LogicSystem::handleGet(std::string url, std::shared_ptr<HttpConnection> connection) {

@@ -78,7 +78,7 @@ void LoginDialog::initHttpHandlers() {
             ErrorContent(tr("===Invalid arguments!==="));
             return;
         }
-        auto user = jsonObj["user"].toString();
+        auto user = jsonObj["username"].toString();
         ValidContent(tr("===Successfully login to your account!==="));
         qDebug()<< "user " << user << " has login!";
     });
@@ -122,7 +122,6 @@ void LoginDialog::ValidContent(QString &&str)
 
 void LoginDialog::on_LoginpushButton_clicked()
 {
-    qDebug()<<"login btn clicked";
     if(!checkEmailValid()){
         ErrorContent("===Invalid email address!===");
         return;
@@ -135,8 +134,8 @@ void LoginDialog::on_LoginpushButton_clicked()
     auto pwd = ui->passwordlineEdit->text();
     //发送http请求登录
     QJsonObject json_obj;
-    json_obj["user"] = user;
-    json_obj["passwd"] = xorString(pwd);
+    json_obj["email"] = user;
+    json_obj["password"] = xorString(pwd);
     HttpManager::getInstance()->PostHttpRequest(QUrl(GATESERVER_URL_PREFIX+"/user_login"),
                                         json_obj, ReqId::ID_USER_LOGIN,Modules::MOD_LOGIN);
 }
