@@ -17,11 +17,13 @@ using grpc::Status;
 using message::GetVerifyReq;
 using message::GetVerifyRsp;
 using message::VerifyService;
-
-class RPCConnectPool {
+using message::GetChatServerReq;
+using message::GetChatServerRsp;
+using message::StatusService;
+class VerifyConnectPool {
 public:
-    RPCConnectPool(size_t pool_size, std::string host, std::string port);
-    ~RPCConnectPool();
+    VerifyConnectPool(size_t pool_size, std::string host, std::string port);
+    ~VerifyConnectPool();
 
     std::unique_ptr<VerifyService::Stub> getStub();
     void returnStub(std::unique_ptr<VerifyService::Stub> stub);
@@ -36,6 +38,26 @@ private:
     std::string port_;
     size_t pool_size_;
 };
+
+class StatusConnectPool {
+public:
+    StatusConnectPool(size_t pool_size, std::string host, std::string port);
+    ~StatusConnectPool();
+
+    std::unique_ptr<StatusService::Stub> getStub();
+    void returnStub(std::unique_ptr<StatusService::Stub> stub);
+    void start();
+    void stop();
+private:
+    std::queue<std::unique_ptr<StatusService::Stub>> stubs_;
+    std::mutex mutex_;
+    std::condition_variable cond_;
+    std::atomic<bool> is_running_;
+    std::string host_;
+    std::string port_;
+    size_t pool_size_;
+};
+
 
 
 #endif /* RPCCONNECTPOOL_H */

@@ -5,7 +5,7 @@ VerifyGrpcClient::VerifyGrpcClient() {
     ConfigManager& config = ConfigManager::getInstance();
     std::string host = config["VerifyServer"]["host"];
     std::string port = config["VerifyServer"]["port"];
-    rpc_pool_ = std::make_unique<RPCConnectPool>(5, host, port);
+    rpc_pool_ = std::make_unique<VerifyConnectPool>(5, host, port);
 }
 
 

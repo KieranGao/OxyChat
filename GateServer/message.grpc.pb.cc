@@ -87,5 +87,71 @@ VerifyService::Service::~Service() {
 }
 
 
+static const char* StatusService_method_names[] = {
+  "/message.StatusService/GetChatServer",
+};
+
+std::unique_ptr< StatusService::Stub> StatusService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< StatusService::Stub> stub(new StatusService::Stub(channel));
+  return stub;
+}
+
+StatusService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_GetChatServer_(StatusService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  {}
+
+::grpc::Status StatusService::Stub::GetChatServer(::grpc::ClientContext* context, const ::message::GetChatServerReq& request, ::message::GetChatServerRsp* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetChatServer_, context, request, response);
+}
+
+void StatusService::Stub::experimental_async::GetChatServer(::grpc::ClientContext* context, const ::message::GetChatServerReq* request, ::message::GetChatServerRsp* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetChatServer_, context, request, response, std::move(f));
+}
+
+void StatusService::Stub::experimental_async::GetChatServer(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::message::GetChatServerRsp* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetChatServer_, context, request, response, std::move(f));
+}
+
+void StatusService::Stub::experimental_async::GetChatServer(::grpc::ClientContext* context, const ::message::GetChatServerReq* request, ::message::GetChatServerRsp* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetChatServer_, context, request, response, reactor);
+}
+
+void StatusService::Stub::experimental_async::GetChatServer(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::message::GetChatServerRsp* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetChatServer_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::message::GetChatServerRsp>* StatusService::Stub::AsyncGetChatServerRaw(::grpc::ClientContext* context, const ::message::GetChatServerReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::message::GetChatServerRsp>::Create(channel_.get(), cq, rpcmethod_GetChatServer_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::message::GetChatServerRsp>* StatusService::Stub::PrepareAsyncGetChatServerRaw(::grpc::ClientContext* context, const ::message::GetChatServerReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::message::GetChatServerRsp>::Create(channel_.get(), cq, rpcmethod_GetChatServer_, context, request, false);
+}
+
+StatusService::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      StatusService_method_names[0],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< StatusService::Service, ::message::GetChatServerReq, ::message::GetChatServerRsp>(
+          [](StatusService::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::message::GetChatServerReq* req,
+             ::message::GetChatServerRsp* resp) {
+               return service->GetChatServer(ctx, req, resp);
+             }, this)));
+}
+
+StatusService::Service::~Service() {
+}
+
+::grpc::Status StatusService::Service::GetChatServer(::grpc::ServerContext* context, const ::message::GetChatServerReq* request, ::message::GetChatServerRsp* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
 }  // namespace message
 

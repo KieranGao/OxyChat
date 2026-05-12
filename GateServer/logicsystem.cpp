@@ -193,6 +193,9 @@ LogicSystem::LogicSystem() {
             beast::ostream(connection->resp_.body()) << jsonstr; 
             return;
         }
+
+        // auto reply = StatusGrpcClient
+
         jsonResp["error"] = 0;
         jsonResp["email"] = userinfo.email;
         jsonResp["username"] = userinfo.username; 
