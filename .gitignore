@@ -3,5 +3,6 @@
 .claude
 build
 GateServer/build
+StatusServer/build
 # VerifyServer/node_modules
-# jsoncpp
+jsoncpp
