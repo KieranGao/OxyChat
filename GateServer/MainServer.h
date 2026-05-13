@@ -1,8 +1,8 @@
 #ifndef MAINSERVER_H
 #define MAINSERVER_H
 
-#include "global.h"
-#include "httpconnection.h"
+#include "Global.h"
+#include "HttpConnection.h"
 
 class MainServer : public std::enable_shared_from_this<MainServer>
 {

@@ -16,13 +16,8 @@ protected:
     Singleton(const Singleton<T>&) = delete;
 
 public:
-    static std::shared_ptr<T> getInstance() {
-        static std::shared_ptr<T> instance;
-        static std::once_flag flag;
-        std::call_once(flag, [](){
-            // 注意不能使用make_shared，因为构造函数是私有的，make_shared无法访问
-            instance = std::shared_ptr<T>(new T());
-        });
+    static T& getInstance() {
+        static T instance;
         return instance;
     }
 };

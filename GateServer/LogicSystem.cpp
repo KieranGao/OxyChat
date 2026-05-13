@@ -1,8 +1,9 @@
-#include "logicsystem.h"
-#include "httpconnection.h"
-#include "verifygrpcclient.h"
-#include "redismanager.h"
-#include "mysqlmanager.h"
+#include "LogicSystem.h"
+#include "HttpConnection.h"
+#include "VerifyGrpcClient.h"
+#include "StatusGrpcClient.h"
+#include "RedisManager.h"
+#include "MySQLManager.h"
 // 注册GET请求的URL和对应的回调函数
 void LogicSystem::registerGet(std::string url, HttpHandler handler) {
     getHandlers_[url] = handler; // 将URL和对应的回调函数存储到map中
@@ -41,7 +42,7 @@ LogicSystem::LogicSystem() {
             return;            
         }
         auto email = jsonData["email"].asString();
-        GetVerifyRsp verifyResp = VerifyGrpcClient::getInstance()->getVerifyCode(email);
+        GetVerifyRsp verifyResp = VerifyGrpcClient::getInstance().getVerifyCode(email);
         std::cerr << "Parsed email: " << email << std::endl;
         jsonResp["error"] = verifyResp.error();
         jsonResp["email"] = jsonData["email"];
@@ -69,7 +70,7 @@ LogicSystem::LogicSystem() {
         }
         
         std::string verify_code;
-        bool valid_code = RedisManager::getInstance()->get(CODE_PREFIX + jsonData["email"].asString(), verify_code);
+        bool valid_code = RedisManager::getInstance().get(CODE_PREFIX + jsonData["email"].asString(), verify_code);
         if(!valid_code) {
             std::cerr << "Verify code expired" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::VERIFY_CODE_EXPIRED);
@@ -90,7 +91,7 @@ LogicSystem::LogicSystem() {
         std::string email = jsonData["email"].asString();
         std::string password = jsonData["password"].asString();
         
-        int uid = MySQLManager::getInstance()->registerUser(user,email,password);
+        int uid = MySQLManager::getInstance().registerUser(user,email,password);
         if(uid == 0 or uid == -1) {
             std::cerr << "user or email already exists!" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::USER_ALREADY_EXISTS);
@@ -128,7 +129,7 @@ LogicSystem::LogicSystem() {
         }
         
         std::string verify_code;
-        bool valid_code = RedisManager::getInstance()->get(CODE_PREFIX + jsonData["email"].asString(), verify_code);
+        bool valid_code = RedisManager::getInstance().get(CODE_PREFIX + jsonData["email"].asString(), verify_code);
         if(!valid_code) {
             std::cerr << "Verify code expired" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::VERIFY_CODE_EXPIRED);
@@ -149,7 +150,7 @@ LogicSystem::LogicSystem() {
         std::string email = jsonData["email"].asString();
         std::string new_password = jsonData["password"].asString();
         
-        bool ret = MySQLManager::getInstance()->userResetpass(user,email,new_password);
+        bool ret = MySQLManager::getInstance().userResetpass(user,email,new_password);
         if(!ret) {
             std::cerr << "Error : user or email do not exists!" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::USER_DO_NOT_EXISTS);
@@ -185,7 +186,7 @@ LogicSystem::LogicSystem() {
         auto email = jsonData["email"].asString();
         auto password = jsonData["password"].asString();
         UserInfo userinfo;
-        bool ret = MySQLManager::getInstance()->checkLogin(email, password, userinfo);
+        bool ret = MySQLManager::getInstance().checkLogin(email, password, userinfo);
         if(!ret) {
             std::cerr << "Error : user do not exists or password do not match!" << std::endl;
             jsonResp["error"] = static_cast<int>(ErrorCodes::USER_LOGIN_ERROR);
@@ -194,15 +195,22 @@ LogicSystem::LogicSystem() {
             return;
         }
 
-        // auto reply = StatusGrpcClient
-
+        GetChatServerRsp getChatServerRsp = StatusGrpcClient::getInstance().getChatServer(userinfo.uid);
+        if(getChatServerRsp.error()) {
+            std::cout << " grpc get chat server failed, error is " << getChatServerRsp.error()<< std::endl;
+            jsonResp["error"] = static_cast<int>(ErrorCodes::RPC_ERROR);
+            std::string jsonstr = jsonResp.toStyledString();
+            beast::ostream(connection->resp_.body()) << jsonstr;
+            return;
+        }
         jsonResp["error"] = 0;
         jsonResp["email"] = userinfo.email;
         jsonResp["username"] = userinfo.username; 
         jsonResp["uid"] = userinfo.uid;
-        // jsonResp["token"] = "";
-        // jsonResp["host"] = "";
-        std::cerr << "user: " << userinfo.username << " has login!\n";
+        jsonResp["token"] = getChatServerRsp.token();
+        jsonResp["host"] = getChatServerRsp.host();
+        std::cerr << "user: " << userinfo.username << " [uid:" << userinfo.uid << "] has login!\n";
+        std::cerr << "Got a ChatServer: [host:" << getChatServerRsp.host() << "]\n";
         std::string jsonstr = jsonResp.toStyledString();
         beast::ostream(connection->resp_.body()) << jsonstr;
     });

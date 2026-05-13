@@ -24,20 +24,21 @@ set(JSONCPP_SOURCES
 )
 
 # 设置Gateserver源文件
-set(GATESERVER_SOURCES 
-    ${CMAKE_CURRENT_SOURCE_DIR}/httpconnection.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/iocontextpool.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/redisconnectpool.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/redismanager.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/configmanager.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/mysqlconnectpool.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/mysqldao.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/mysqlmanager.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/rpcconnectpool.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/verifygrpcclient.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/logicsystem.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/mainserver.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 
+set(GATESERVER_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/HttpConnection.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/IOContextPool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/RedisConnectPool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/RedisManager.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/ConfigManager.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MySQLConnectPool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MySQLDao.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MySQLManager.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/RPCConnectPool.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/VerifyGrpcClient.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/StatusGrpcClient.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/LogicSystem.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainServer.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
 # 查找protobuf包

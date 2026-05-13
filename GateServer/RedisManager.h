@@ -2,9 +2,9 @@
 #define REDISMANAGER_H
 
 #include <hiredis/hiredis.h>
-#include "singleton.h"
-#include "global.h"
-#include "redisconnectpool.h"
+#include "Singleton.h"
+#include "Global.h"
+#include "RedisConnectPool.h"
 class RedisManager : public Singleton<RedisManager> {
 
     friend class Singleton<RedisManager>;

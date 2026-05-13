@@ -8,24 +8,25 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/configmanager.cpp" "CMakeFiles/GateServer.dir/configmanager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/configmanager.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/ConfigManager.cpp" "CMakeFiles/GateServer.dir/ConfigManager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/ConfigManager.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/HttpConnection.cpp" "CMakeFiles/GateServer.dir/HttpConnection.cpp.o" "gcc" "CMakeFiles/GateServer.dir/HttpConnection.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/IOContextPool.cpp" "CMakeFiles/GateServer.dir/IOContextPool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/IOContextPool.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/LogicSystem.cpp" "CMakeFiles/GateServer.dir/LogicSystem.cpp.o" "gcc" "CMakeFiles/GateServer.dir/LogicSystem.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/MainServer.cpp" "CMakeFiles/GateServer.dir/MainServer.cpp.o" "gcc" "CMakeFiles/GateServer.dir/MainServer.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/MySQLConnectPool.cpp" "CMakeFiles/GateServer.dir/MySQLConnectPool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/MySQLConnectPool.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/MySQLDao.cpp" "CMakeFiles/GateServer.dir/MySQLDao.cpp.o" "gcc" "CMakeFiles/GateServer.dir/MySQLDao.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/MySQLManager.cpp" "CMakeFiles/GateServer.dir/MySQLManager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/MySQLManager.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/RPCConnectPool.cpp" "CMakeFiles/GateServer.dir/RPCConnectPool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/RPCConnectPool.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/RedisConnectPool.cpp" "CMakeFiles/GateServer.dir/RedisConnectPool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/RedisConnectPool.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/RedisManager.cpp" "CMakeFiles/GateServer.dir/RedisManager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/RedisManager.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/StatusGrpcClient.cpp" "CMakeFiles/GateServer.dir/StatusGrpcClient.cpp.o" "gcc" "CMakeFiles/GateServer.dir/StatusGrpcClient.cpp.o.d"
+  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/VerifyGrpcClient.cpp" "CMakeFiles/GateServer.dir/VerifyGrpcClient.cpp.o" "gcc" "CMakeFiles/GateServer.dir/VerifyGrpcClient.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o" "gcc" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o" "gcc" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_value.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o" "gcc" "CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.cpp" "CMakeFiles/GateServer.dir/httpconnection.cpp.o" "gcc" "CMakeFiles/GateServer.dir/httpconnection.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/iocontextpool.cpp" "CMakeFiles/GateServer.dir/iocontextpool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/iocontextpool.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.cpp" "CMakeFiles/GateServer.dir/logicsystem.cpp.o" "gcc" "CMakeFiles/GateServer.dir/logicsystem.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/main.cpp" "CMakeFiles/GateServer.dir/main.cpp.o" "gcc" "CMakeFiles/GateServer.dir/main.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mainserver.cpp" "CMakeFiles/GateServer.dir/mainserver.cpp.o" "gcc" "CMakeFiles/GateServer.dir/mainserver.cpp.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/message.grpc.pb.cc" "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o" "gcc" "CMakeFiles/GateServer.dir/message.grpc.pb.cc.o.d"
   "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/build/message.pb.cc" "CMakeFiles/GateServer.dir/message.pb.cc.o" "gcc" "CMakeFiles/GateServer.dir/message.pb.cc.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqlconnectpool.cpp" "CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqldao.cpp" "CMakeFiles/GateServer.dir/mysqldao.cpp.o" "gcc" "CMakeFiles/GateServer.dir/mysqldao.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mysqlmanager.cpp" "CMakeFiles/GateServer.dir/mysqlmanager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/mysqlmanager.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.cpp" "CMakeFiles/GateServer.dir/redisconnectpool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/redisconnectpool.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.cpp" "CMakeFiles/GateServer.dir/redismanager.cpp.o" "gcc" "CMakeFiles/GateServer.dir/redismanager.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/rpcconnectpool.cpp" "CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o" "gcc" "CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o.d"
-  "/home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/verifygrpcclient.cpp" "CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o" "gcc" "CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o.d"
   )
 
 # Pairs of files generated by the same build rule.

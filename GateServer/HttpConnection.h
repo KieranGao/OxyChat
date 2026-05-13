@@ -1,8 +1,8 @@
 #ifndef HTTPCONNECTION_H
 #define HTTPCONNECTION_H
 
-#include "global.h"
-#include "logicsystem.h"
+#include "Global.h"
+#include "LogicSystem.h"
 
 class HttpConnection : public std::enable_shared_from_this<HttpConnection> 
 {

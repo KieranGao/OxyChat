@@ -5,10 +5,10 @@
 #include <queue>
 #include <mutex>
 #include <condition_variable>
-#include "singleton.h"
+#include "Singleton.h"
 #include "grpcpp/grpcpp.h"
 #include "message.grpc.pb.h"
-#include "global.h"
+#include "Global.h"
 
 using grpc::Channel;
 using grpc::ClientContext;
@@ -17,8 +17,11 @@ using grpc::Status;
 using message::GetVerifyReq;
 using message::GetVerifyRsp;
 using message::VerifyService;
+
 using message::GetChatServerReq;
 using message::GetChatServerRsp;
+using message::LoginReq;
+using message::LoginRsp;
 using message::StatusService;
 class VerifyConnectPool {
 public:

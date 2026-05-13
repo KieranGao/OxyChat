@@ -3,9 +3,9 @@
 
 #include <grpcpp/grpcpp.h>
 #include "message.grpc.pb.h" 
-#include "global.h"
-#include "singleton.h"
-#include "rpcconnectpool.h"
+#include "Global.h"
+#include "Singleton.h"
+#include "RPCConnectPool.h"
 
 using grpc::Channel;
 using grpc::ClientContext;

@@ -1,8 +1,8 @@
 #ifndef LOGICSYSTEM_H
 #define LOGICSYSTEM_H
 
-#include "global.h"
-#include "singleton.h"
+#include "Global.h"
+#include "Singleton.h"
 #include <unordered_map>
 #include <functional>
 #include <string>

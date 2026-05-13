@@ -1647,6 +1647,7 @@ CMakeFiles/GateServer.dir/mysqldao.cpp.o: \
  /usr/include/c++/11/stack /usr/include/c++/11/bits/stl_stack.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/writer.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/configmanager.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h \
  /usr/include/boost/filesystem.hpp \
  /usr/include/boost/filesystem/config.hpp \
  /usr/include/boost/filesystem/path.hpp \
@@ -1988,5 +1989,4 @@ CMakeFiles/GateServer.dir/mysqldao.cpp.o: \
  /usr/include/boost/multi_index/member.hpp \
  /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
  /usr/include/boost/property_tree/ini_parser.hpp \
- /usr/include/boost/property_tree/detail/file_parser_error.hpp \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h
+ /usr/include/boost/property_tree/detail/file_parser_error.hpp

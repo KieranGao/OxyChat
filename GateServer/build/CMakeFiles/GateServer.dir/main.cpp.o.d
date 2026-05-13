@@ -1,7 +1,7 @@
 CMakeFiles/GateServer.dir/main.cpp.o: \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/main.cpp \
  /usr/include/stdc-predef.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/global.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/Global.h \
  /usr/include/boost/beast/http.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -1630,11 +1630,11 @@ CMakeFiles/GateServer.dir/main.cpp.o: \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/stack \
  /usr/include/c++/11/bits/stl_stack.h \
  /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/../jsoncpp/include/json/writer.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/mainserver.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/httpconnection.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/logicsystem.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/singleton.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/configmanager.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/MainServer.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/HttpConnection.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/LogicSystem.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/Singleton.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/ConfigManager.h \
  /usr/include/boost/filesystem.hpp \
  /usr/include/boost/filesystem/config.hpp \
  /usr/include/boost/filesystem/path.hpp \
@@ -1982,6 +1982,6 @@ CMakeFiles/GateServer.dir/main.cpp.o: \
  /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
  /usr/include/hiredis/sds.h /usr/include/hiredis/alloc.h \
  /usr/include/c++/11/stdlib.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redismanager.h \
- /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/redisconnectpool.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/RedisManager.h \
+ /home/oxythecrack/OneDrive/QtProject/OxyChat/GateServer/RedisConnectPool.h \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h

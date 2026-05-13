@@ -1,5 +1,5 @@
-#include "mainserver.h"
-#include "iocontextpool.h"
+#include "MainServer.h"
+#include "IOContextPool.h"
 MainServer::MainServer(boost::asio::io_context& ioc, unsigned short port)
     : acceptor_(ioc, tcp::endpoint(tcp::v4(), port)),
       ioc_(ioc) {
@@ -10,7 +10,7 @@ void MainServer::start()
 {    
     // 延长对象生命周期到回调执行时，否则在回调执行时对象可能已经被销毁了
     auto self = shared_from_this();
-    auto& io_context_ = IOContextPool::getInstance()->getIOContext();
+    auto& io_context_ = IOContextPool::getInstance().getIOContext();
     std::shared_ptr<HttpConnection> new_connection = std::make_shared<HttpConnection>(io_context_);
     acceptor_.async_accept(new_connection->socket(), [self, new_connection](beast::error_code ec) {
         try {

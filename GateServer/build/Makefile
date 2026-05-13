@@ -129,29 +129,317 @@ GateServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/build
 .PHONY : GateServer/fast
 
-configmanager.o: configmanager.cpp.o
-.PHONY : configmanager.o
+ConfigManager.o: ConfigManager.cpp.o
+.PHONY : ConfigManager.o
 
 # target to build an object file
-configmanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.o
-.PHONY : configmanager.cpp.o
+ConfigManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/ConfigManager.cpp.o
+.PHONY : ConfigManager.cpp.o
 
-configmanager.i: configmanager.cpp.i
-.PHONY : configmanager.i
+ConfigManager.i: ConfigManager.cpp.i
+.PHONY : ConfigManager.i
 
 # target to preprocess a source file
-configmanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.i
-.PHONY : configmanager.cpp.i
+ConfigManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/ConfigManager.cpp.i
+.PHONY : ConfigManager.cpp.i
 
-configmanager.s: configmanager.cpp.s
-.PHONY : configmanager.s
+ConfigManager.s: ConfigManager.cpp.s
+.PHONY : ConfigManager.s
 
 # target to generate assembly for a file
-configmanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/configmanager.cpp.s
-.PHONY : configmanager.cpp.s
+ConfigManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/ConfigManager.cpp.s
+.PHONY : ConfigManager.cpp.s
+
+HttpConnection.o: HttpConnection.cpp.o
+.PHONY : HttpConnection.o
+
+# target to build an object file
+HttpConnection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/HttpConnection.cpp.o
+.PHONY : HttpConnection.cpp.o
+
+HttpConnection.i: HttpConnection.cpp.i
+.PHONY : HttpConnection.i
+
+# target to preprocess a source file
+HttpConnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/HttpConnection.cpp.i
+.PHONY : HttpConnection.cpp.i
+
+HttpConnection.s: HttpConnection.cpp.s
+.PHONY : HttpConnection.s
+
+# target to generate assembly for a file
+HttpConnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/HttpConnection.cpp.s
+.PHONY : HttpConnection.cpp.s
+
+IOContextPool.o: IOContextPool.cpp.o
+.PHONY : IOContextPool.o
+
+# target to build an object file
+IOContextPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/IOContextPool.cpp.o
+.PHONY : IOContextPool.cpp.o
+
+IOContextPool.i: IOContextPool.cpp.i
+.PHONY : IOContextPool.i
+
+# target to preprocess a source file
+IOContextPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/IOContextPool.cpp.i
+.PHONY : IOContextPool.cpp.i
+
+IOContextPool.s: IOContextPool.cpp.s
+.PHONY : IOContextPool.s
+
+# target to generate assembly for a file
+IOContextPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/IOContextPool.cpp.s
+.PHONY : IOContextPool.cpp.s
+
+LogicSystem.o: LogicSystem.cpp.o
+.PHONY : LogicSystem.o
+
+# target to build an object file
+LogicSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/LogicSystem.cpp.o
+.PHONY : LogicSystem.cpp.o
+
+LogicSystem.i: LogicSystem.cpp.i
+.PHONY : LogicSystem.i
+
+# target to preprocess a source file
+LogicSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/LogicSystem.cpp.i
+.PHONY : LogicSystem.cpp.i
+
+LogicSystem.s: LogicSystem.cpp.s
+.PHONY : LogicSystem.s
+
+# target to generate assembly for a file
+LogicSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/LogicSystem.cpp.s
+.PHONY : LogicSystem.cpp.s
+
+MainServer.o: MainServer.cpp.o
+.PHONY : MainServer.o
+
+# target to build an object file
+MainServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MainServer.cpp.o
+.PHONY : MainServer.cpp.o
+
+MainServer.i: MainServer.cpp.i
+.PHONY : MainServer.i
+
+# target to preprocess a source file
+MainServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MainServer.cpp.i
+.PHONY : MainServer.cpp.i
+
+MainServer.s: MainServer.cpp.s
+.PHONY : MainServer.s
+
+# target to generate assembly for a file
+MainServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MainServer.cpp.s
+.PHONY : MainServer.cpp.s
+
+MySQLConnectPool.o: MySQLConnectPool.cpp.o
+.PHONY : MySQLConnectPool.o
+
+# target to build an object file
+MySQLConnectPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLConnectPool.cpp.o
+.PHONY : MySQLConnectPool.cpp.o
+
+MySQLConnectPool.i: MySQLConnectPool.cpp.i
+.PHONY : MySQLConnectPool.i
+
+# target to preprocess a source file
+MySQLConnectPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLConnectPool.cpp.i
+.PHONY : MySQLConnectPool.cpp.i
+
+MySQLConnectPool.s: MySQLConnectPool.cpp.s
+.PHONY : MySQLConnectPool.s
+
+# target to generate assembly for a file
+MySQLConnectPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLConnectPool.cpp.s
+.PHONY : MySQLConnectPool.cpp.s
+
+MySQLDao.o: MySQLDao.cpp.o
+.PHONY : MySQLDao.o
+
+# target to build an object file
+MySQLDao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLDao.cpp.o
+.PHONY : MySQLDao.cpp.o
+
+MySQLDao.i: MySQLDao.cpp.i
+.PHONY : MySQLDao.i
+
+# target to preprocess a source file
+MySQLDao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLDao.cpp.i
+.PHONY : MySQLDao.cpp.i
+
+MySQLDao.s: MySQLDao.cpp.s
+.PHONY : MySQLDao.s
+
+# target to generate assembly for a file
+MySQLDao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLDao.cpp.s
+.PHONY : MySQLDao.cpp.s
+
+MySQLManager.o: MySQLManager.cpp.o
+.PHONY : MySQLManager.o
+
+# target to build an object file
+MySQLManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLManager.cpp.o
+.PHONY : MySQLManager.cpp.o
+
+MySQLManager.i: MySQLManager.cpp.i
+.PHONY : MySQLManager.i
+
+# target to preprocess a source file
+MySQLManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLManager.cpp.i
+.PHONY : MySQLManager.cpp.i
+
+MySQLManager.s: MySQLManager.cpp.s
+.PHONY : MySQLManager.s
+
+# target to generate assembly for a file
+MySQLManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/MySQLManager.cpp.s
+.PHONY : MySQLManager.cpp.s
+
+RPCConnectPool.o: RPCConnectPool.cpp.o
+.PHONY : RPCConnectPool.o
+
+# target to build an object file
+RPCConnectPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RPCConnectPool.cpp.o
+.PHONY : RPCConnectPool.cpp.o
+
+RPCConnectPool.i: RPCConnectPool.cpp.i
+.PHONY : RPCConnectPool.i
+
+# target to preprocess a source file
+RPCConnectPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RPCConnectPool.cpp.i
+.PHONY : RPCConnectPool.cpp.i
+
+RPCConnectPool.s: RPCConnectPool.cpp.s
+.PHONY : RPCConnectPool.s
+
+# target to generate assembly for a file
+RPCConnectPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RPCConnectPool.cpp.s
+.PHONY : RPCConnectPool.cpp.s
+
+RedisConnectPool.o: RedisConnectPool.cpp.o
+.PHONY : RedisConnectPool.o
+
+# target to build an object file
+RedisConnectPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisConnectPool.cpp.o
+.PHONY : RedisConnectPool.cpp.o
+
+RedisConnectPool.i: RedisConnectPool.cpp.i
+.PHONY : RedisConnectPool.i
+
+# target to preprocess a source file
+RedisConnectPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisConnectPool.cpp.i
+.PHONY : RedisConnectPool.cpp.i
+
+RedisConnectPool.s: RedisConnectPool.cpp.s
+.PHONY : RedisConnectPool.s
+
+# target to generate assembly for a file
+RedisConnectPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisConnectPool.cpp.s
+.PHONY : RedisConnectPool.cpp.s
+
+RedisManager.o: RedisManager.cpp.o
+.PHONY : RedisManager.o
+
+# target to build an object file
+RedisManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisManager.cpp.o
+.PHONY : RedisManager.cpp.o
+
+RedisManager.i: RedisManager.cpp.i
+.PHONY : RedisManager.i
+
+# target to preprocess a source file
+RedisManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisManager.cpp.i
+.PHONY : RedisManager.cpp.i
+
+RedisManager.s: RedisManager.cpp.s
+.PHONY : RedisManager.s
+
+# target to generate assembly for a file
+RedisManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/RedisManager.cpp.s
+.PHONY : RedisManager.cpp.s
+
+StatusGrpcClient.o: StatusGrpcClient.cpp.o
+.PHONY : StatusGrpcClient.o
+
+# target to build an object file
+StatusGrpcClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/StatusGrpcClient.cpp.o
+.PHONY : StatusGrpcClient.cpp.o
+
+StatusGrpcClient.i: StatusGrpcClient.cpp.i
+.PHONY : StatusGrpcClient.i
+
+# target to preprocess a source file
+StatusGrpcClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/StatusGrpcClient.cpp.i
+.PHONY : StatusGrpcClient.cpp.i
+
+StatusGrpcClient.s: StatusGrpcClient.cpp.s
+.PHONY : StatusGrpcClient.s
+
+# target to generate assembly for a file
+StatusGrpcClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/StatusGrpcClient.cpp.s
+.PHONY : StatusGrpcClient.cpp.s
+
+VerifyGrpcClient.o: VerifyGrpcClient.cpp.o
+.PHONY : VerifyGrpcClient.o
+
+# target to build an object file
+VerifyGrpcClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/VerifyGrpcClient.cpp.o
+.PHONY : VerifyGrpcClient.cpp.o
+
+VerifyGrpcClient.i: VerifyGrpcClient.cpp.i
+.PHONY : VerifyGrpcClient.i
+
+# target to preprocess a source file
+VerifyGrpcClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/VerifyGrpcClient.cpp.i
+.PHONY : VerifyGrpcClient.cpp.i
+
+VerifyGrpcClient.s: VerifyGrpcClient.cpp.s
+.PHONY : VerifyGrpcClient.s
+
+# target to generate assembly for a file
+VerifyGrpcClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/VerifyGrpcClient.cpp.s
+.PHONY : VerifyGrpcClient.cpp.s
 
 home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o: home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.cpp.o
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o
@@ -225,78 +513,6 @@ home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s
 .PHONY : home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.cpp.s
 
-httpconnection.o: httpconnection.cpp.o
-.PHONY : httpconnection.o
-
-# target to build an object file
-httpconnection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.o
-.PHONY : httpconnection.cpp.o
-
-httpconnection.i: httpconnection.cpp.i
-.PHONY : httpconnection.i
-
-# target to preprocess a source file
-httpconnection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.i
-.PHONY : httpconnection.cpp.i
-
-httpconnection.s: httpconnection.cpp.s
-.PHONY : httpconnection.s
-
-# target to generate assembly for a file
-httpconnection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/httpconnection.cpp.s
-.PHONY : httpconnection.cpp.s
-
-iocontextpool.o: iocontextpool.cpp.o
-.PHONY : iocontextpool.o
-
-# target to build an object file
-iocontextpool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.o
-.PHONY : iocontextpool.cpp.o
-
-iocontextpool.i: iocontextpool.cpp.i
-.PHONY : iocontextpool.i
-
-# target to preprocess a source file
-iocontextpool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.i
-.PHONY : iocontextpool.cpp.i
-
-iocontextpool.s: iocontextpool.cpp.s
-.PHONY : iocontextpool.s
-
-# target to generate assembly for a file
-iocontextpool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/iocontextpool.cpp.s
-.PHONY : iocontextpool.cpp.s
-
-logicsystem.o: logicsystem.cpp.o
-.PHONY : logicsystem.o
-
-# target to build an object file
-logicsystem.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.o
-.PHONY : logicsystem.cpp.o
-
-logicsystem.i: logicsystem.cpp.i
-.PHONY : logicsystem.i
-
-# target to preprocess a source file
-logicsystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.i
-.PHONY : logicsystem.cpp.i
-
-logicsystem.s: logicsystem.cpp.s
-.PHONY : logicsystem.s
-
-# target to generate assembly for a file
-logicsystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/logicsystem.cpp.s
-.PHONY : logicsystem.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -320,30 +536,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-mainserver.o: mainserver.cpp.o
-.PHONY : mainserver.o
-
-# target to build an object file
-mainserver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.o
-.PHONY : mainserver.cpp.o
-
-mainserver.i: mainserver.cpp.i
-.PHONY : mainserver.i
-
-# target to preprocess a source file
-mainserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.i
-.PHONY : mainserver.cpp.i
-
-mainserver.s: mainserver.cpp.s
-.PHONY : mainserver.s
-
-# target to generate assembly for a file
-mainserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mainserver.cpp.s
-.PHONY : mainserver.cpp.s
 
 message.grpc.pb.o: message.grpc.pb.cc.o
 .PHONY : message.grpc.pb.o
@@ -393,174 +585,6 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
-mysqlconnectpool.o: mysqlconnectpool.cpp.o
-.PHONY : mysqlconnectpool.o
-
-# target to build an object file
-mysqlconnectpool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.o
-.PHONY : mysqlconnectpool.cpp.o
-
-mysqlconnectpool.i: mysqlconnectpool.cpp.i
-.PHONY : mysqlconnectpool.i
-
-# target to preprocess a source file
-mysqlconnectpool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.i
-.PHONY : mysqlconnectpool.cpp.i
-
-mysqlconnectpool.s: mysqlconnectpool.cpp.s
-.PHONY : mysqlconnectpool.s
-
-# target to generate assembly for a file
-mysqlconnectpool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlconnectpool.cpp.s
-.PHONY : mysqlconnectpool.cpp.s
-
-mysqldao.o: mysqldao.cpp.o
-.PHONY : mysqldao.o
-
-# target to build an object file
-mysqldao.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.o
-.PHONY : mysqldao.cpp.o
-
-mysqldao.i: mysqldao.cpp.i
-.PHONY : mysqldao.i
-
-# target to preprocess a source file
-mysqldao.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.i
-.PHONY : mysqldao.cpp.i
-
-mysqldao.s: mysqldao.cpp.s
-.PHONY : mysqldao.s
-
-# target to generate assembly for a file
-mysqldao.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqldao.cpp.s
-.PHONY : mysqldao.cpp.s
-
-mysqlmanager.o: mysqlmanager.cpp.o
-.PHONY : mysqlmanager.o
-
-# target to build an object file
-mysqlmanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.o
-.PHONY : mysqlmanager.cpp.o
-
-mysqlmanager.i: mysqlmanager.cpp.i
-.PHONY : mysqlmanager.i
-
-# target to preprocess a source file
-mysqlmanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.i
-.PHONY : mysqlmanager.cpp.i
-
-mysqlmanager.s: mysqlmanager.cpp.s
-.PHONY : mysqlmanager.s
-
-# target to generate assembly for a file
-mysqlmanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/mysqlmanager.cpp.s
-.PHONY : mysqlmanager.cpp.s
-
-redisconnectpool.o: redisconnectpool.cpp.o
-.PHONY : redisconnectpool.o
-
-# target to build an object file
-redisconnectpool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redisconnectpool.cpp.o
-.PHONY : redisconnectpool.cpp.o
-
-redisconnectpool.i: redisconnectpool.cpp.i
-.PHONY : redisconnectpool.i
-
-# target to preprocess a source file
-redisconnectpool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redisconnectpool.cpp.i
-.PHONY : redisconnectpool.cpp.i
-
-redisconnectpool.s: redisconnectpool.cpp.s
-.PHONY : redisconnectpool.s
-
-# target to generate assembly for a file
-redisconnectpool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redisconnectpool.cpp.s
-.PHONY : redisconnectpool.cpp.s
-
-redismanager.o: redismanager.cpp.o
-.PHONY : redismanager.o
-
-# target to build an object file
-redismanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.o
-.PHONY : redismanager.cpp.o
-
-redismanager.i: redismanager.cpp.i
-.PHONY : redismanager.i
-
-# target to preprocess a source file
-redismanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.i
-.PHONY : redismanager.cpp.i
-
-redismanager.s: redismanager.cpp.s
-.PHONY : redismanager.s
-
-# target to generate assembly for a file
-redismanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/redismanager.cpp.s
-.PHONY : redismanager.cpp.s
-
-rpcconnectpool.o: rpcconnectpool.cpp.o
-.PHONY : rpcconnectpool.o
-
-# target to build an object file
-rpcconnectpool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.o
-.PHONY : rpcconnectpool.cpp.o
-
-rpcconnectpool.i: rpcconnectpool.cpp.i
-.PHONY : rpcconnectpool.i
-
-# target to preprocess a source file
-rpcconnectpool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.i
-.PHONY : rpcconnectpool.cpp.i
-
-rpcconnectpool.s: rpcconnectpool.cpp.s
-.PHONY : rpcconnectpool.s
-
-# target to generate assembly for a file
-rpcconnectpool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/rpcconnectpool.cpp.s
-.PHONY : rpcconnectpool.cpp.s
-
-verifygrpcclient.o: verifygrpcclient.cpp.o
-.PHONY : verifygrpcclient.o
-
-# target to build an object file
-verifygrpcclient.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.o
-.PHONY : verifygrpcclient.cpp.o
-
-verifygrpcclient.i: verifygrpcclient.cpp.i
-.PHONY : verifygrpcclient.i
-
-# target to preprocess a source file
-verifygrpcclient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.i
-.PHONY : verifygrpcclient.cpp.i
-
-verifygrpcclient.s: verifygrpcclient.cpp.s
-.PHONY : verifygrpcclient.s
-
-# target to generate assembly for a file
-verifygrpcclient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GateServer.dir/build.make CMakeFiles/GateServer.dir/verifygrpcclient.cpp.s
-.PHONY : verifygrpcclient.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -570,9 +594,45 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GateServer"
-	@echo "... configmanager.o"
-	@echo "... configmanager.i"
-	@echo "... configmanager.s"
+	@echo "... ConfigManager.o"
+	@echo "... ConfigManager.i"
+	@echo "... ConfigManager.s"
+	@echo "... HttpConnection.o"
+	@echo "... HttpConnection.i"
+	@echo "... HttpConnection.s"
+	@echo "... IOContextPool.o"
+	@echo "... IOContextPool.i"
+	@echo "... IOContextPool.s"
+	@echo "... LogicSystem.o"
+	@echo "... LogicSystem.i"
+	@echo "... LogicSystem.s"
+	@echo "... MainServer.o"
+	@echo "... MainServer.i"
+	@echo "... MainServer.s"
+	@echo "... MySQLConnectPool.o"
+	@echo "... MySQLConnectPool.i"
+	@echo "... MySQLConnectPool.s"
+	@echo "... MySQLDao.o"
+	@echo "... MySQLDao.i"
+	@echo "... MySQLDao.s"
+	@echo "... MySQLManager.o"
+	@echo "... MySQLManager.i"
+	@echo "... MySQLManager.s"
+	@echo "... RPCConnectPool.o"
+	@echo "... RPCConnectPool.i"
+	@echo "... RPCConnectPool.s"
+	@echo "... RedisConnectPool.o"
+	@echo "... RedisConnectPool.i"
+	@echo "... RedisConnectPool.s"
+	@echo "... RedisManager.o"
+	@echo "... RedisManager.i"
+	@echo "... RedisManager.s"
+	@echo "... StatusGrpcClient.o"
+	@echo "... StatusGrpcClient.i"
+	@echo "... StatusGrpcClient.s"
+	@echo "... VerifyGrpcClient.o"
+	@echo "... VerifyGrpcClient.i"
+	@echo "... VerifyGrpcClient.s"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_reader.s"
@@ -582,48 +642,15 @@ help:
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.o"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.i"
 	@echo "... home/oxythecrack/OneDrive/QtProject/OxyChat/jsoncpp/src/lib_json/json_writer.s"
-	@echo "... httpconnection.o"
-	@echo "... httpconnection.i"
-	@echo "... httpconnection.s"
-	@echo "... iocontextpool.o"
-	@echo "... iocontextpool.i"
-	@echo "... iocontextpool.s"
-	@echo "... logicsystem.o"
-	@echo "... logicsystem.i"
-	@echo "... logicsystem.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainserver.o"
-	@echo "... mainserver.i"
-	@echo "... mainserver.s"
 	@echo "... message.grpc.pb.o"
 	@echo "... message.grpc.pb.i"
 	@echo "... message.grpc.pb.s"
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
-	@echo "... mysqlconnectpool.o"
-	@echo "... mysqlconnectpool.i"
-	@echo "... mysqlconnectpool.s"
-	@echo "... mysqldao.o"
-	@echo "... mysqldao.i"
-	@echo "... mysqldao.s"
-	@echo "... mysqlmanager.o"
-	@echo "... mysqlmanager.i"
-	@echo "... mysqlmanager.s"
-	@echo "... redisconnectpool.o"
-	@echo "... redisconnectpool.i"
-	@echo "... redisconnectpool.s"
-	@echo "... redismanager.o"
-	@echo "... redismanager.i"
-	@echo "... redismanager.s"
-	@echo "... rpcconnectpool.o"
-	@echo "... rpcconnectpool.i"
-	@echo "... rpcconnectpool.s"
-	@echo "... verifygrpcclient.o"
-	@echo "... verifygrpcclient.i"
-	@echo "... verifygrpcclient.s"
 .PHONY : help
 
 

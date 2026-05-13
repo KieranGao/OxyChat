@@ -1,5 +1,5 @@
-#include "verifygrpcclient.h"
-#include "configmanager.h"
+#include "VerifyGrpcClient.h"
+#include "ConfigManager.h"
 
 VerifyGrpcClient::VerifyGrpcClient() {
     ConfigManager& config = ConfigManager::getInstance();

@@ -1,4 +1,4 @@
-#include "httpconnection.h"
+#include "HttpConnection.h"
 
 
 HttpConnection::HttpConnection(boost::asio::io_context& ioc)
@@ -128,7 +128,7 @@ void HttpConnection::handleRequest_() {
 
     if(req_.method() == http::verb::get) {
         PreParseGetParam(); // 预处理GET请求的URL和参数
-        bool ok = LogicSystem::getInstance()->handleGet(get_url_, shared_from_this());
+        bool ok = LogicSystem::getInstance().handleGet(get_url_, shared_from_this());
         if (!ok) {
             resp_.result(http::status::not_found);
             resp_.set(http::field::content_type, "text/plain");
@@ -142,7 +142,7 @@ void HttpConnection::handleRequest_() {
         return;
     }
     if(req_.method() == http::verb::post) {
-        bool ok = LogicSystem::getInstance()->handlePost(req_.target().to_string(), shared_from_this());
+        bool ok = LogicSystem::getInstance().handlePost(req_.target().to_string(), shared_from_this());
         if(!ok) {
             resp_.result(http::status::not_found);
             resp_.set(http::field::content_type, "text/plain");

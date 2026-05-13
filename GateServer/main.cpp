@@ -1,9 +1,9 @@
-#include "global.h"
-#include "mainserver.h"
-#include "configmanager.h"
+#include "Global.h"
+#include "MainServer.h"
+#include "ConfigManager.h"
 #include <hiredis/hiredis.h>
 #include "assert.h"
-#include "redismanager.h"
+#include "RedisManager.h"
 
 int main() {
     ConfigManager& configManager = ConfigManager::getInstance();
