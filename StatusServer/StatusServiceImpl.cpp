@@ -33,6 +33,7 @@ StatusServiceImpl::StatusServiceImpl()
         server.port = g_config[name]["port"];
         server.host = g_config[name]["host"];
         server.name = g_config[name]["name"];
+        server.id = idx;
         servers_[server.name] = server;
         servers_idx_[idx++] = server;
     }
@@ -46,6 +47,11 @@ ChatServer& StatusServiceImpl::getChatServer() {
     SegTree_->updateVal(minIdx, minCon + 1);
     // std::cerr << minIdx << std::endl;
     return servers_idx_[minIdx];
+}
+
+void StatusServiceImpl::returnServer(ChatServer& cs) {
+    std::lock_guard<std::mutex> lock(server_mtx_);
+    SegTree_->updateVal(cs.id, SegTree_->getVal(cs.id) - 1);
 }
 
 Status StatusServiceImpl::GetChatServer(ServerContext* context, const GetChatServerReq* req, GetChatServerRsp* resp)

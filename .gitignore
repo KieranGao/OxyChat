@@ -1,8 +1,8 @@
 .vscode
-.qtcreator
 .claude
-build
 GateServer/build
 StatusServer/build
+Client/build
+Client/.qtcreator
 # VerifyServer/node_modules
 # jsoncpp
