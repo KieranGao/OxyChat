@@ -11,7 +11,8 @@ enum ReqId {
     ID_REGISTER = 2, // 注册新用户
     ID_RESET = 3,
     ID_USER_LOGIN = 4,
-    ID_CHAT_LOGIN = 5
+    ID_CHAT_LOGIN = 5,
+    ID_CHAT_LOGIN_RSP = 6
 };
 
 enum ErrorCodes{

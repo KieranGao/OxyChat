@@ -39,7 +39,7 @@ signals:
 private slots:
     void on_LoginpushButton_clicked();
     void slot_login_finish(ReqId id, const QString& res, ErrorCodes err);
-    void slot_tcp_connect_finish();
+    void slot_tcp_connect_finish(bool ok);
 private:
     QMap<ReqId, std::function<void(const QJsonObject&)>> handlers_;
 };

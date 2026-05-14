@@ -69,7 +69,7 @@ TCPManager::TCPManager()
 // 登录消息处理
 void TCPManager::initHandlers()
 {
-    handlers_.insert(ID_CHAT_LOGIN, [this](ReqId id, int len, QByteArray data) {
+    handlers_.insert(ID_CHAT_LOGIN_RSP, [this](ReqId id, int len, QByteArray data) {
         Q_UNUSED(len);
         qDebug() << "Handle ID:" << id << "Data:" << data;
         QJsonDocument jsonDoc = QJsonDocument::fromJson(data);

@@ -99,8 +99,6 @@ void LoginDialog::initHttpHandlers() {
         qDebug()<< "user is " << user << " uid is " << si.uid <<" host is "
                  << si.host << " Port is " << si.port << " Token is " << si.token;
 
-        ValidContent(tr("===Successfully login to your account!==="));
-
         emit signal_connect_tcp(si);
         qDebug()<< "user " << user << " has login!";
     });
@@ -184,3 +182,19 @@ void LoginDialog::slot_login_finish(ReqId id, const QString &res, ErrorCodes err
     return;
 }
 
+void LoginDialog::slot_tcp_connect_finish(bool ok) {
+    if(ok){
+        ValidContent(tr("===ChatServer connected! Logging in...==="));
+        QJsonObject jsonObj;
+        jsonObj["uid"] = uid_;
+        jsonObj["token"] = token_;
+        QJsonDocument doc(jsonObj);
+        QString jsonString = doc.toJson(QJsonDocument::Indented);
+        //发送tcp请求给chat server
+        emit TCPManager::getInstance()->signal_send_data(ReqId::ID_CHAT_LOGIN, jsonString);
+    }else{
+        ErrorContent(tr("===Unknown network error!==="));
+        return;
+    }
+
+};
