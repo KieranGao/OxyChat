@@ -22,8 +22,8 @@ using message::StatusService;
 
 class ChatServer {
 public:
-	ChatServer() : host(""), port(""), name(""), id(0) {}
-	ChatServer(const ChatServer& cs) : host(cs.host), port(cs.port), name(cs.name), id(cs.id) {}
+	ChatServer() : host(""), port(""), name("") {}
+	ChatServer(const ChatServer& cs) : host(cs.host), port(cs.port), name(cs.name) {}
 	ChatServer& operator=(const ChatServer& cs) {
 		if(&cs == this) {
 			return *this;
@@ -31,13 +31,11 @@ public:
 		host = cs.host;
 		name = cs.name;
 		port = cs.port;
-		id = cs.id;
 		return *this;
 	}
 	std::string host;
 	std::string port;
 	std::string name;
-	int id;
 };
 
 class StatusServiceImpl final : public StatusService::Service {
@@ -48,7 +46,6 @@ public:
 private:
     void insertToken(int uid, std::string token);
     ChatServer& getChatServer();
-	void returnServer(ChatServer& cs);
     std::unique_ptr<SegmentTree> SegTree_;
     std::unordered_map<std::string, ChatServer> servers_;
     std::unordered_map<int, ChatServer> servers_idx_;

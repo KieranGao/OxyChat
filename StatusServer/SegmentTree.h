@@ -5,7 +5,7 @@
 #define rs(p) (p << 1 | 1)
 
 #include <vector>
-// 支持单点修改，区间求取最小值下标的权值线段树
+// 支持单点修改，区间求取最小值下标的线段树
 class SegmentTree {
 public:
     SegmentTree() = default;
